@@ -1,0 +1,13 @@
+[package]
+name = "ethan"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+serenity = { version = "0.12", features = ["framework", "standard_framework", "model"] }
+tokio = { version = "1.21.2", features = ["macros", "rt-multi-thread"] }
+log = "0.4"
+dotenvy = "0.15.7"
+sqlx = { version = "0.8.6", features = ["runtime-tokio-rustls", "sqlite"] }
+chrono = "0.4.44"
+csv = "1.4.0"

@@ -1,0 +1,23 @@
+Name;Card Type;Landscape;Ability;Set;Image Path;Cost;Attack;Defense
+Ethan Allfire;Creature;Cornfield;When Ethan Allfire leaves play, draw 1 card for each Cornfield Landscape you control.;For The Glory;./assets/cards/ethan_allfire.png;1;0;4
+10th Anniversary Backer;Hero;;The first time you play a KICKSTARTER card on your turn, reveal the top card of your deck. If it is a KICKSTARTER card, draw it. ;Kickstarter #1;./assets/cards/10th_anniversary_backer.png;;;
+Abdominal Snowman;Creature;IcyLands;`+3 ATK while your opponent does not control a Creature in this Lane. ;Ice King Vs Marceline;./assets/cards/abdominal_snowman.png;1;3;2
+AbneGator;Creature;Useless Swamp;If this card is discarded from your hand or deck during your turn, gain 1 action. If it is discarded during an opponent's turn, draw a card instead. ;Kickstarter #2;./assets/cards/abnegator.png;1;3;4
+Abraca Amadeus;Spell;Useless Swamp;Target opponent discards a card from their hand for every 5 cards in your discard pile. ;BMO Vs Lady Rainicorn;./assets/cards/abraca_amadeus.png;2;;
+Abracadaniel;Hero;;Pay 1 Action >>> Reveal the top card of your deck. If it's a Rainbow card, play it. ;Hero Pack;./assets/cards/abracadaniel.png;;;
+Absorb Aether;Spell;Useless Swamp;Deal 3 damage to a Creature and heal 3 HP. Repeat this effect for each player with 1 or fewer cards in hand. ;Land of Legends;./assets/cards/absorb_aether.png;1;;
+Adorabunny;Creature;NiceLands;At the start of your turn, if Adorabunny has 4 or more damage on it, deal 3 damage to target opponent. ;Doubles Tournament;./assets/cards/adorabunny.png;1;0;8
+Adored Cobnoblin;Creature;Cornfield;Gobble. FLOOP >>> Reduce the cost of the next Creature you play by 1. ;Flame Princess Vs Fern;./assets/cards/adored_cobnoblin.png;1;1;4
+Aeromancer;Creature;Blue Plains;When Aeromancer enters play, you may swap the positions of 2 Creatures target player controls. ;Doubles Tournament;./assets/cards/aeromancer.png;2;3;5
+Albino Eyebat;Creature;NiceLands;While Albino Eyebat has exactly 2 damage on it, it has +2 ATK. ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/albino_eyebat.png;1;2;7
+Amaizing Avalanche;Spell;Cornfield;Each of your Creatures has +1 ATK this turn for each facedown Landscape in play. ;Lemon Grab Vs Gunter;./assets/cards/amaizing_avalanche.png;1;;
+Ancient Comet;Spell;Rainbow;Flip a coin. If heads, deal 2 damage to each of your Creatures. If tails, your Creatures get +2 ATK this turn. ;Kickstarter #1;./assets/cards/ancient_comet.png;0;;
+Ancient Healer;Creature;Blue Plains;If Ancient Healer is played on a facedown Landscape, turn it face up and heal 4 HP.;Kickstarter #1;./assets/cards/ancient_healer.png;1;1;6
+Ancient Magic Pharaoh Dragon;Creature;SandyLands;When Ancient Magic Pharaoh Dragon enters or leaves play, shuffle your discard pile and swap it with your deck. ;Land of Legends;./assets/cards/ancient_magic_pharaoh_dragon.png;2;6;6
+Ancient Scholar;Creature;Blue Plains;FLOOP >>> Return a random Rainbow card from your discard pile to your hand. If you control a Building in this Lane, gain 1 Action.;Finn Vs Jake;./assets/cards/ancient_scholar.png;1;1;7
+Angel Heart;Creature;Rainbow;While Angel Heart has exactly 3 damage on it, it has +3 ATK. ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/angel_heart.png;0;0;7
+Angel of Chocolate;Creature;NiceLands;Pay 1 Action >>> Heal all damage from Angel of Chocolate. ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/angel_of_chocolate.png;2;3;7
+Angel of Vanilla;Creature;NiceLands;Pay 1 Action >>> Heal all damage from Angel of Vanilla. ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/angel_of_vanilla.png;1;2;6
+Apple Bully;Creature;Cornfield;Apple Bully's Landscape cannot be flipped face down by opponents. ;For The Glory;./assets/cards/apple_bully.png;2;3;8
+Apple Pieclops;Creature;NiceLands;At the start of your turn, you may heal or deal 1 damage to each of your Creatures. (Choose for each Creature.) ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/apple_pieclops.png;2;1;7
+Archer Dan;Creature;Cornfield;FLOOP >>> Destroy target Building in Archer Dan's Lane. ;Finn Vs Jake;./assets/cards/archer_dan.png;2;2;6
