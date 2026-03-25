@@ -1,23 +1,42 @@
 Name;Card Type;Landscape;Ability;Set;Image Path;Cost;Attack;Defense
-Ethan Allfire;Creature;Cornfield;When Ethan Allfire leaves play, draw 1 card for each Cornfield Landscape you control.;For The Glory;./assets/cards/ethan_allfire.png;1;0;4
-10th Anniversary Backer;Hero;;The first time you play a KICKSTARTER card on your turn, reveal the top card of your deck. If it is a KICKSTARTER card, draw it. ;Kickstarter #1;./assets/cards/10th_anniversary_backer.png;;;
-Abdominal Snowman;Creature;IcyLands;`+3 ATK while your opponent does not control a Creature in this Lane. ;Ice King Vs Marceline;./assets/cards/abdominal_snowman.png;1;3;2
-AbneGator;Creature;Useless Swamp;If this card is discarded from your hand or deck during your turn, gain 1 action. If it is discarded during an opponent's turn, draw a card instead. ;Kickstarter #2;./assets/cards/abnegator.png;1;3;4
-Abraca Amadeus;Spell;Useless Swamp;Target opponent discards a card from their hand for every 5 cards in your discard pile. ;BMO Vs Lady Rainicorn;./assets/cards/abraca_amadeus.png;2;;
-Abracadaniel;Hero;;Pay 1 Action >>> Reveal the top card of your deck. If it's a Rainbow card, play it. ;Hero Pack;./assets/cards/abracadaniel.png;;;
-Absorb Aether;Spell;Useless Swamp;Deal 3 damage to a Creature and heal 3 HP. Repeat this effect for each player with 1 or fewer cards in hand. ;Land of Legends;./assets/cards/absorb_aether.png;1;;
-Adorabunny;Creature;NiceLands;At the start of your turn, if Adorabunny has 4 or more damage on it, deal 3 damage to target opponent. ;Doubles Tournament;./assets/cards/adorabunny.png;1;0;8
-Adored Cobnoblin;Creature;Cornfield;Gobble. FLOOP >>> Reduce the cost of the next Creature you play by 1. ;Flame Princess Vs Fern;./assets/cards/adored_cobnoblin.png;1;1;4
-Aeromancer;Creature;Blue Plains;When Aeromancer enters play, you may swap the positions of 2 Creatures target player controls. ;Doubles Tournament;./assets/cards/aeromancer.png;2;3;5
-Albino Eyebat;Creature;NiceLands;While Albino Eyebat has exactly 2 damage on it, it has +2 ATK. ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/albino_eyebat.png;1;2;7
-Amaizing Avalanche;Spell;Cornfield;Each of your Creatures has +1 ATK this turn for each facedown Landscape in play. ;Lemon Grab Vs Gunter;./assets/cards/amaizing_avalanche.png;1;;
-Ancient Comet;Spell;Rainbow;Flip a coin. If heads, deal 2 damage to each of your Creatures. If tails, your Creatures get +2 ATK this turn. ;Kickstarter #1;./assets/cards/ancient_comet.png;0;;
-Ancient Healer;Creature;Blue Plains;If Ancient Healer is played on a facedown Landscape, turn it face up and heal 4 HP.;Kickstarter #1;./assets/cards/ancient_healer.png;1;1;6
-Ancient Magic Pharaoh Dragon;Creature;SandyLands;When Ancient Magic Pharaoh Dragon enters or leaves play, shuffle your discard pile and swap it with your deck. ;Land of Legends;./assets/cards/ancient_magic_pharaoh_dragon.png;2;6;6
-Ancient Scholar;Creature;Blue Plains;FLOOP >>> Return a random Rainbow card from your discard pile to your hand. If you control a Building in this Lane, gain 1 Action.;Finn Vs Jake;./assets/cards/ancient_scholar.png;1;1;7
-Angel Heart;Creature;Rainbow;While Angel Heart has exactly 3 damage on it, it has +3 ATK. ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/angel_heart.png;0;0;7
-Angel of Chocolate;Creature;NiceLands;Pay 1 Action >>> Heal all damage from Angel of Chocolate. ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/angel_of_chocolate.png;2;3;7
-Angel of Vanilla;Creature;NiceLands;Pay 1 Action >>> Heal all damage from Angel of Vanilla. ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/angel_of_vanilla.png;1;2;6
-Apple Bully;Creature;Cornfield;Apple Bully's Landscape cannot be flipped face down by opponents. ;For The Glory;./assets/cards/apple_bully.png;2;3;8
-Apple Pieclops;Creature;NiceLands;At the start of your turn, you may heal or deal 1 damage to each of your Creatures. (Choose for each Creature.) ;Princess Bubblegum Vs Lumpy Space Princess;./assets/cards/apple_pieclops.png;2;1;7
-Archer Dan;Creature;Cornfield;FLOOP >>> Destroy target Building in Archer Dan's Lane. ;Finn Vs Jake;./assets/cards/archer_dan.png;2;2;6
+Ethan Allfire;Creature;Cornfield;When Ethan Allfire leaves play, draw 1 card for each Cornfield Landscape you control.;For The Glory;ethan_allfire.png;1;0;4
+10th Anniversary Backer;Hero;;The first time you play a KICKSTARTER card on your turn, reveal the top card of your deck. If it is a KICKSTARTER card, draw it. ;Kickstarter #1;10th_anniversary_backer.png;;;
+Abdominal Snowman;Creature;IcyLands;`+3 ATK while your opponent does not control a Creature in this Lane. ;Ice King Vs Marceline;abdominal_snowman.png;1;3;2
+AbneGator;Creature;Useless Swamp;If this card is discarded from your hand or deck during your turn, gain 1 action. If it is discarded during an opponent's turn, draw a card instead. ;Kickstarter #2;abnegator.png;1;3;4
+Abraca Amadeus;Spell;Useless Swamp;Target opponent discards a card from their hand for every 5 cards in your discard pile. ;BMO Vs Lady Rainicorn;abraca_amadeus.png;2;;
+Abracadaniel;Hero;;Pay 1 Action >>> Reveal the top card of your deck. If it's a Rainbow card, play it. ;Hero Pack;abracadaniel.png;;;
+Absorb Aether;Spell;Useless Swamp;Deal 3 damage to a Creature and heal 3 HP. Repeat this effect for each player with 1 or fewer cards in hand. ;Land of Legends;absorb_aether.png;1;;
+Adorabunny;Creature;NiceLands;At the start of your turn, if Adorabunny has 4 or more damage on it, deal 3 damage to target opponent. ;Doubles Tournament;adorabunny.png;1;0;8
+Adored Cobnoblin;Creature;Cornfield;Gobble. FLOOP >>> Reduce the cost of the next Creature you play by 1. ;Flame Princess Vs Fern;adored_cobnoblin.png;1;1;4
+Aeromancer;Creature;Blue Plains;When Aeromancer enters play, you may swap the positions of 2 Creatures target player controls. ;Doubles Tournament;aeromancer.png;2;3;5
+Albino Eyebat;Creature;NiceLands;While Albino Eyebat has exactly 2 damage on it, it has +2 ATK. ;Princess Bubblegum Vs Lumpy Space Princess;albino_eyebat.png;1;2;7
+Amaizing Avalanche;Spell;Cornfield;Each of your Creatures has +1 ATK this turn for each facedown Landscape in play. ;Lemon Grab Vs Gunter;amaizing_avalanche.png;1;;
+Ancient Comet;Spell;Rainbow;Flip a coin. If heads, deal 2 damage to each of your Creatures. If tails, your Creatures get +2 ATK this turn. ;Kickstarter #1;ancient_comet.png;0;;
+Ancient Healer;Creature;Blue Plains;If Ancient Healer is played on a facedown Landscape, turn it face up and heal 4 HP.;Kickstarter #1;ancient_healer.png;1;1;6
+Ancient Magic Pharaoh Dragon;Creature;SandyLands;When Ancient Magic Pharaoh Dragon enters or leaves play, shuffle your discard pile and swap it with your deck. ;Land of Legends;ancient_magic_pharaoh_dragon.png;2;6;6
+Ancient Scholar;Creature;Blue Plains;FLOOP >>> Return a random Rainbow card from your discard pile to your hand. If you control a Building in this Lane, gain 1 Action.;Finn Vs Jake;ancient_scholar.png;1;1;7
+Angel Heart;Creature;Rainbow;While Angel Heart has exactly 3 damage on it, it has +3 ATK. ;Princess Bubblegum Vs Lumpy Space Princess;angel_heart.png;0;0;7
+Angel of Chocolate;Creature;NiceLands;Pay 1 Action >>> Heal all damage from Angel of Chocolate. ;Princess Bubblegum Vs Lumpy Space Princess;angel_of_chocolate.png;2;3;7
+Angel of Vanilla;Creature;NiceLands;Pay 1 Action >>> Heal all damage from Angel of Vanilla. ;Princess Bubblegum Vs Lumpy Space Princess;angel_of_vanilla.png;1;2;6
+Apple Bully;Creature;Cornfield;Apple Bully's Landscape cannot be flipped face down by opponents.;For The Glory;apple_bully.png;2;3;8
+Apple Pieclops;Creature;NiceLands;At the start of your turn, you may heal or deal 1 damage to each of your Creatures. (Choose for each Creature.);Princess Bubblegum Vs Lumpy Space Princess;apple_pieclops.png;2;1;7
+Archer Dan;Creature;Cornfield;FLOOP >>> Destroy target Building in Archer Dan's Lane. ;Finn Vs Jake;archer_dan.png;2;2;6
+Archer Danica;Creature;Cornfield;FLOOP and destroy a Building you control >>> Deal 3 damage to each opposing Creature.;Fionna Vs Cake;archer_danica.png;2;1;6
+Arctic Purge;Spell;IcyLands;Draw 2 cards. You may remove a non-damage token from a Creature or Landscape. If you do, your opponent discards a card.;Land of Legends;arctic_purge.png;1;;
+Ascension Silo;Building;Cornfield;Once per turn, when your Creature in this Lane leaves play, draw 1 card. ;Flame Princess Vs Fern;ascension_silo.png;1;;
+Ashcloud;Spell;LavaFlats;Deal 2 damage to target opposing Creature and each opposing Creature in adjacent Lanes. ;Land of Legends;ashcloud.png;1;;
+Assistance;Teamwork;SandyLands;At the start of your or your teammate's Fight Phase, if you or your teammate played a Creature with cost 2 or greater this turn, the other teammate may draw a card.;Doubles Tournament;assistance.png;1;;
+Auto-Plucker;Building;NiceLands;FLOOP >>> Heal or deal 1 damage to your Creature in this Lane.;Ice King Vs Marceline;auto-plucker.png;1;;
+Axolotl;Creature;Rainbow;FLOOP >>> Target player heals 3 HP. ;Peppermint Butler Vs Magic Man;axolotl.png;1;1;5
+Baby Finn & Jake;Hero;;Your deck cannot contain Creatures with more than 3 ATK. At the start of your Fight Phase, choose one of your Creatures. That Creature has +3 ATK this turn. ;Kickstarter #2;baby_finn_&_jake.png;;;
+Bail Out;Spell;SandyLands;Put target Creature you own into your hand, then play it for free. ;Doubles Tournament;bail_out.png;1;;
+Bale Out;Spell;Cornfield;When target Creature attacks this turn, if it would leave play during the Fight Phase, remove all damage from it instead. ;Doubles Tournament;bale_out.png;1;;
+Ban-She Princess;Creature;Useless Swamp;When Ban-She Princess enters play, you may remove a token from an adjacent Landscape. ;Ice King Vs Marceline;ban-she_princess.png;1;2;7
+Ban-She Queen;Creature;Useless Swamp;When Ban-She Queen enters play, you may remove a token from an adjacent Landscape. ;Ice King Vs Marceline;ban-she_queen.png;2;3;9
+Banana Man;Hero;;Once per turn, you may peek at the bottom card of your deck and either discard it or put it on top of your deck. ;Kickstarter #2;banana_man.png;;;
+Barrow Baron;Creature;Useless Swamp;Barrow Baron costs 1 less to play for every 5 cards in an opponent's discard pile. ;Prismo Vs The Lich;barrow_baron.png;3;5;12
+Basalt Behemoth;Creature;LavaFlats;FLOOP >>> Burn an opposing Creature, then deal 1 damage to that Creature for each burn token on Creatures in play. ;Land of Legends;basalt_behemoth.png;2;1;12
+Bayou Boa;Creature;Useless Swamp;Destroy a Creature you control >>> Put 2 :attack_token: on Bayou Boa and heal 2 damage from it.;Land of Legends;bayou_boa.png;2;2;12
+Bayou Fountain;Building;Useless Swamp;Discard a card >>> Your Creature in this Lane has +1 ATK this turn. ;Doubles Tournament;bayou_fountain.png;1;;
+Bayou Surge;Spell;Useless Swamp;Destroy all Creatures in a Lane. Starting with you, each player may put a Creature from their hand into play on a Landscape they control in that Lane. ;Kickstarter #2;bayou_surge.png;2;;
+Beach Ball;Spell;Rainbow;Gain 4 HP. Draw a card. You may put this into an opponent's hand. If you do, draw another card. (You may only play 1 Beach Ball per turn.) ;Kickstarter #1;beach_ball.png;0;;

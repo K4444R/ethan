@@ -1,3 +1,3 @@
 *.png binary
-
+*.webp binary
 assets/cards/*.png filter=lfs diff=lfs merge=lfs -text
