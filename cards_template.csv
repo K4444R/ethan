@@ -40,3 +40,299 @@ Bayou Boa;Creature;Useless Swamp;Destroy a Creature you control >>> Put 2 :attac
 Bayou Fountain;Building;Useless Swamp;Discard a card >>> Your Creature in this Lane has +1 ATK this turn. ;Doubles Tournament;bayou_fountain.png;1;;
 Bayou Surge;Spell;Useless Swamp;Destroy all Creatures in a Lane. Starting with you, each player may put a Creature from their hand into play on a Landscape they control in that Lane. ;Kickstarter #2;bayou_surge.png;2;;
 Beach Ball;Spell;Rainbow;Gain 4 HP. Draw a card. You may put this into an opponent's hand. If you do, draw another card. (You may only play 1 Beach Ball per turn.) ;Kickstarter #1;beach_ball.png;0;;
+Beach Blast;Spell;Rainbow;Reveal the top 3 cards of your deck. Draw 1 card and discard the rest. After playing this, you may put it into your teammate's hand. ;Doubles Tournament;beach_blast.png;1;;
+Beach Mummy;Creature;SandyLands;FLOOP >>> Return a Creature in an adjacent Lane to its owner's hand. ;BMO Vs Lady Rainicorn;beach_mummy.png;1;1;6
+Beach Worm;Creature;SandyLands;When Beach Worm enters play, if you control Creatures of 4 different Landscape types, you may destroy target opposing Creature. ;Land of Legends;beach_worm.png;1;4;4
+Bean Ball Bomba;Building;NiceLands;FLOOP >>> Heal or deal damage to your Creature in this Lane until it has 4 damage on it. ;Doubles Tournament;bean_ball_bomba.png;2;;
+Berserk Bakery;Building;Cornfield;Once during your turn, you may discard a card from your hand to put a damage token on Berserk Bakery. FLOOP >>> Deal 1 damage to the opposing Creature in this Lane for each token on this. ;Kickstarter #1;berserk_bakery.png;2;;
+Betty;Hero;;Your minimum deck size is +5. Begin the game with 5 different 1-cost Spells removed from your deck. Set them aside. These are your Research Notes. Pay 1 action >>> Reveal a random card from your Research Notes and play it for free. (Limit: Once per turn.);Kickstarter #2;betty.png;;;
+Big Foot;Creature;Rainbow;FLOOP >>> Flip target facedown Landscape you control face up. ;Finn Vs Jake;big_foot.png;0;1;4
+Billy;Hero;;If your opponent's deck runs out of cards, you win the game. ;Hero Pack;billy.png;;;
+Biomancer;Creature;Blue Plains;Whenever one of your Creatures changes Lanes, heal 2 damage from Biomancer. ;Doubles Tournament;biomancer.png;1;1;8
+Bitterchill Avalancheetah;Creature;IcyLands;When Bitterchill Avalancheetah damages an opponent, they must discard a Spell or reveal a hand with none. ;Prismo Vs The Lich;bitterchill_avalancheetah.png;2;3;8
+Black Hole Pendant;Spell;Rainbow;Target Creature has +X ATK this turn, where X is the number of different Landscape types your opponent controls. ;Ice King Vs Marceline;black_hole_pendant.png;0;;
+Black Paladin;Creature;Useless Swamp;`+1 ATK for each card any player has discarded from their hand this turn. ;For The Glory;black_paladin.png;1;1;7
+Bladespire Maelstrom;Spell;Rainbow;Remove all non-damage tokens from Creatures, Landscapes, and players. Then deal 2 damage to target Creature for each token removed. ;Peppermint Butler Vs Magic Man;bladespire_maelstrom.png;1;;
+Blizzard Born;Creature;IcyLands;When Blizzard Born enters play, freeze all Landscapes you and target opponent control. You may play Creatures onto frozen Landscapes.;Kickstarter #2;blizzard_born.png;2;6;5
+Blizzardpaw Avalancheetah;Creature;IcyLands;When Blizzardpaw Avalancheetah enters play, draw 2 cards unless another player freezes one of their unfrozen Landscapes. ;Prismo Vs The Lich;blizzardpaw_avalancheetah.png;1;3;2
+Blonde MerWitch;Creature;Rainbow;;BMO Vs Lady Rainicorn;blonde_merwitch.png;2;3;9
+Blood Bath;Spell;Useless Swamp;Target opponent may discard a card with cost 2 or greater. If they do not, deal 5 damage to them. ;Ice King Vs Marceline;blood_bath.png;2;;
+Blood Castle;Building;Rainbow;Each time an opposing Creature in this Lane takes damage, increase the amount by 1. ;Fionna Vs Cake;blood_castle.png;1;;
+Blood Fortress;Building;Rainbow;Your Creature in this Lane has +1 ATK. ;Finn Vs Jake;blood_fortress.png;1;;
+Blood Transfusion;Spell;Rainbow;Remove a card in any player's discard pile from the game. Heal target Creature X damage, where X is the cost of the removed card. ;Ice King Vs Marceline;blood_transfusion.png;0;;
+Blue Candy;Spell;NiceLands;Heal up to 3 damage from target Creature you control. ;Princess Bubblegum Vs Lumpy Space Princess;blue_candy.png;1;;
+Blue Gnome;Creature;Blue Plains;FLOOP >>> Deal 1 damage to each opposing Creature that is on a Useless Swamp Landscape. ;For The Glory;blue_gnome.png;1;1;6
+Blue Merlock;Creature;Useless Swamp;FLOOP >>> Draw a card, then discard a card. ;For The Glory;blue_merlock.png;1;2;5
+Blue Ogre;Creature;Blue Plains;Whenever you draw a card, Blue Ogre has +1 ATK this turn. ;For The Glory;blue_ogre.png;2;1;5
+Blue Plains Drifter;Creature;Blue Plains;Once per turn, you may swap Lanes with another one of your Creatures. Both Creatures have +1 ATK this turn. ;Promo;blue_plains_drifter.png;1;1;6
+Blue Slimey;Creature;Blue Plains;If you control 3 or more different Landscape types when Blue Slimey enters play, return a Creature in this Lane to its owner's hand. ;For The Glory;blue_slimey.png;1;2;6
+Blueberry Djinni;Creature;Blue Plains;If Blueberry Djinni replaces a Creature, draw 2 cards. ;Princess Bubblegum Vs Lumpy Space Princess;blueberry_djinni.png;1;2;6
+Blueberry Pieclops;Creature;Blue Plains;Blueberry Pieclops costs 1 less to play for each Spell you have played this turn. ;For The Glory;blueberry_pieclops.png;4;5;6
+BMO;Hero;;Discard a card from your hand >>> Deal 1 Damage to target Creature. ;BMO Vs Lady Rainicorn;bmo.png;;;
+Boarder Collie;Creature;IcyLands;FLOOP >>> Move Boarder Collie to any of your empty Landscapes. If either Landscape in that Lane is frozen, gain 1 Action. ;Ice King Vs Marceline;boarder_collie.png;1;1;7
+Bog Ban-She Angel;Creature;Useless Swamp;Pay 1 Action >>> Move all damage on this Creature to target Creature. ;Ice King Vs Marceline;bog_ban-she_angel.png;2;2;7
+Bog Bum;Creature;Useless Swamp;If Bog Bum leaves play while ready, each opponent discards a random card. ;Ice King Vs Marceline;bog_bum.png;1;2;6
+Bog Cyclone;Spell;Useless Swamp;Shuffle your discard pile. Put 2 random cards from it into your hand and the rest on the bottom of your deck. Then remove this card from the game. ;Kickstarter #2;bog_cyclone.png;1;;
+Bog Eyesnek;Creature;Useless Swamp;"When Bog Eyesnek enters play, deal 1 damage to target opponent and heal 1 HP for each Creature in play with ""Eyesnek"" in its name. ";Land of Legends;bog_eyesnek.png;1;1;9
+Bog Frog Bomb;Creature;Useless Swamp;If Bog Frog Bomb leaves play while ready, deal 2 damage to each opposing Creature. ;Ice King Vs Marceline;bog_drog_bomb.png;2;3;8
+Bog Palace;Building;Useless Swamp;Your Creature in this Lane has +3 ATK. At the start of each of your turns, discard a card. ;Doubles Tournament;bog_palace.png;2;;
+Bomb Pop;Spell;IcyLands;Destroy target Creature on a frozen Landscape. ;Doubles Tournament;bomb_pop.png;1;;
+Bone Wand;Spell;Rainbow;Play only if you control a Useless Swamp Creature. Target opponent discards a card from their hand. ;BMO Vs Lady Rainicorn;bone_wand.png;0;;
+Bongo Bounce House;Building;SandyLands;When you are dealt damage, deal that damage to Bongo Bounce House instead. ;Kickstarter #1;bongo_bounce_house.png;2;;8
+Bottlebeard, the Cool;Creature;SandyLands;"When Bottlebeard enters play, you may put up to 2 cards with ""Potion"" in their name into your hand from your discard pile. ";Peppermint Butler Vs Magic Man;bottlebeard,_the_cool.png;2;3;7
+Bouncing Zebracorn;Creature;Cornfield;`+1 ATK for each different Landscape type you control. ;Lemon Grab Vs Gunter;bouncing_zebracorn.png;2;1;9
+Boxing Day;Spell;Rainbow;Put an :attack_token: on each friendly Creature. ;Peppermint Butler Vs Magic Man;boxing_day.png;1;;
+Brain Gooey;Creature;Blue Plains;If Brain Gooey replaces a Creature, it has +2 ATK this turn. ;Princess Bubblegum Vs Lumpy Space Princess;brain_gooey.png;1;1;7
+Brainblades;Spell;Blue Plains;Put an :attack_token: on target Creature. Give it an additional :attack_token: for each other card in your hand. ;Land of Legends;brainblades.png;2;;
+Brew Haha;Creature;NiceLands;"When Brew Haha enters play, search your deck for a card with ""Potion"" in its name. Play it for free and shuffle your deck. ";Land of Legends;brew_haha.png;2;4;3
+Brief Power;Spell;Rainbow;Target Useless Swamp Creature you control has +2 ATK this turn. ;Princess Bubblegum Vs Lumpy Space Princess;brief_power.png;0;;
+Brigadier Banana Split;Creature;IcyLands;When Brigadier Banana Split attacks, deal 2 damage to target opposing Creature on a frozen Landscape. ;Doubles Tournament;brigadier_banana_split.png;2;3;9
+Brightheart Nexus;Building;NiceLands;When you play a Spell, heal 1 damage from friendly Creatures in this Lane. If you have no Creatures in this Lane, target player gains 1 HP instead. ;Peppermint Butler Vs Magic Man;brightheart_nexus.png;1;;
+Brilliant Discovery;Spell;Rainbow;Draw 2 cards. You may shuffle up to 2 Spells from your discard pile into your Research Notes. ;Kickstarter #2;brilliant_discovery.png;1;;
+Brilliant Flare;Spell;LavaFlats;Draw 5 cards. At end of turn, discard all but 1 card. ;Peppermint Butler Vs Magic Man;brilliant_flare.png;1;;
+"
+Broils Coils";Spell;LavaFlats;Deal 3 damage to target Creature. If a Creature is destroyed this way, gain 1 action. ;Flame Princess Vs Fern;broils_coils.png;1;;
+Broog Rider;Creature;Cornfield;When Broog Rider leaves play, put an :attack_token: on your Creatures with cost 1. ;Prismo Vs The Lich;broog_rider.png;1;3;3
+Bulkunai, the Leech;Creature;Useless Swamp;Discard a card >>> Heal 3 damage from Bulkunai. (Limit: Once per turn.) ;Peppermint Butler Vs Magic Man;bulkunai,_the_leech.png;2;4;9
+Bull Sigil;Spell;Rainbow;Put an :attack_token: on target Creature. If the Creature has 2 or more :attack_token: on it, you may draw a card. ;Peppermint Butler Vs Magic Man;bull_sigil.png;0;;
+Bums Away!;Spell;Useless Swamp;Target opponent may discard a card. If they do not, deal 2 damage to each of their Creatures. ;Ice King Vs Marceline;bums_away.png;1;;
+Burly Lumberjack;Creature;Cornfield;You may play additional Buildings in this Lane. ;Fionna Vs Cake;burly_lumberjack.png;2;2;9
+Business Dog;Creature;Blue Plains;"+2 ATK for each card you have played with ""Dog"" or ""Puppy"" in its title this turn. ";Fionna Vs Cake;business_dog.png;1;1;6
+Buttering Ram;Spell;Cornfield;Exhaust any number of Creatures you control. Deal 2 damage to target opponent for each Creature you exhausted this way. ;Land of Legends;buttering_ram.png;1;;
+Cabin of Many Woods;Building;Cornfield;Cabin of Many Woods costs 1 less to play for each Flooped Creature you control. Your Creature in this Lane has +5 DEF. ;Fionna Vs Cake;cabin_of_many_woods.png;5;;
+Cactus Thug;Creature;SandyLands;Adjacent Cornfield Creatures have +1 ATK. ;For The Glory;cactus_thug.png;1;2;7
+Cake;Hero;;Each time a Building enters play under your control, heal 2 Damage from each Creature you control with a Building on its Landscape. ;Fionna Vs Cake;cake.png;;;
+Camaraderie;Teamwork;IcyLands;Each time an opposing Creature deals damage to your team, deal 1 damage to the opposing team. ;Doubles Tournament;camaraderie.png;2;;
+Camp Kernel;Spell;Cornfield;Your Creatures with cost 1 in this Lane have +1 ATK and +1 DEF. ;Prismo Vs The Lich;camp_kernel.png;1;;
+Canopic, the Ceremonial;Creature;NiceLands;When Canopic enters play, put a Spell from your discard pile on top of your deck. ;Peppermint Butler Vs Magic Man;canopic,_the_ceremonial.png;1;3;4
+Captain Taco;Creature;Cornfield;When Captain Taco enters play, deal 1 damage to each Creature that is not on a Cornfield Landscape. ;For The Glory;captain_taco.png;1;1;1
+Cardboard Mansion;Building;Useless Swamp;Cardboard Mansion costs 1 less to play for every 5 cards in your discard pile. FLOOP >>> Gain 1 Action. ;Ice King Vs Marceline;cardboard_mansion.png;5;;
+Careful Shuffle;Spell;Cornfield;Choose a letter of the alphabet, then reveal the top 3 cards of your deck. Put all cards with names that begin with the chosen letter into your hand and discard the rest. ;Kickstarter #2;careful_shuffle.png;0;;
+Carmel Camel;Creature;SandyLands;When a Creature you own leaves play, you may put it underneath this card instead. +1 ATK and +1 DEF for each card under this. When this card leaves play, discard all cards under it. ;Lemon Grab Vs Gunter;carmel_camel.png;1;0;4
+Carrier Crab;Creature;Rainbow;When Carrier Crab enters play, you may play a card with cost 1 for free. ;Prismo Vs The Lich;carrier_crab.png;2;3;8
+Cave of Solitude;Building;NiceLands;Discard a card >>> Your Creature in this Lane cannot be targeted or attacked until the start of your next turn.;Princess Bubblegum Vs Lumpy Space Princess;cave_of_solitude.png;2;;
+Celestial Castle;Building;Rainbow;Your Creature in this Lane has +3 DEF. ;Finn Vs Jake;celestial_castle.png;1;;
+Celestial Fortress;Building;Rainbow;The opposing Creature in this Lane has -2 DEF. ;Fionna Vs Cake;celestial_fortress.png;1;;
+Cerebral Blood Pact;Spell;Rainbow;Put this under a friendly creature. After a creature attacks, it takes damage equal to this creatures attack. Whenever your 'Cerebral Bloodstorm' deals damage, increase it by 2.;Custom Community Cards;cerebral_blood_pact.png;1;;
+Cerebral Bloodstorm;Spell;Rainbow;Deal 1 Damage to each opposing Creature. ;Finn Vs Jake;cerebral_bloodstorm.png;1;;
+Cerebral Imp;Creature;Useless Swamp;When Cerebral Imp enters play, you may discard a card to play Cerebral Bloodstorm from your discard pile for free. ;Custom Community Cards;cerebral_imp.png;0;2;4
+Cerulean Eyesnek;Creature;Blue Plains;"When Cerulean Eyesnek enters play, each player draws a card for each Creature they control with ""Eyesnek"" in its name. ";Land of Legends;cerulean_eyesnek.png;1;3;3
+Chalice, the Cruel;Creature;SandyLands;After you play a Spell, deal 2 damage to an opposing Creature. ;Peppermint Butler Vs Magic Man;chalice,_the_cruel.png;2;3;11
+Chameleon;Creature;Rainbow;When you play Chameleon, choose its Landscape type. ;Prismo Vs The Lich;chameleon.png;0;2;2
+Champion's Emblem;Spell;NiceLands;Heal 3 damage from target Creature. If that Creature still has damage on it, gain 1 action. ;Flame Princess Vs Fern;champion's_emblem.png;1;;
+Chancellor's Commended;Creature;Cornfield;When Chancellor's Commended enters play, choose a letter of the alphabet. Other Creatures you control whose names begin with the chosen letter have +3 ATK. ;Kickstarter #2;chancellor's_commended.png;2;3;10
+Charlie;Hero;;Once during your turn, you may move a Creature you control to an adjacent empty Landscape. ;Doubles Tournament;charlie.png;;;
+Charming City;Building;Blue Plains;All Creatures in this Lane lose their Landscape type and become Rainbow Creatures. ;Fionna Vs Cake;charming_city.png;1;;
+Cheat Sheet;Spell;Rainbow;"Draw a card. The next 2 cards you play with ""Potion"" in their name cost 1 less this turn. ";Peppermint Butler Vs Magic Man;cheat_sheet.png;1;;
+Cherished Cobnoblin;Creature;Cornfield;Gobble. FLOOP >>> Remove 1 or 2 non-damage tokens from target Creature. Then, place that many :attack_token: on target friendly Creature. ;Flame Princess Vs Fern;cherished_cobnoblin.png;2;3;4
+Chest Burster;Creature;Useless Swamp;At the start of your turn, deal 3 damage to each opponent who has no cards in hand. ;BMO Vs Lady Rainicorn;chest_burster.png;1;1;10
+Chillwave;Spell;IcyLands;Deal 1 damage to each opposing Creature for each non-damage token on that Creature. Chillwave deals double damage to Creatures on frozen Landscapes. ;Land of Legends;chillwave.png;0;;
+Chivalrous Armourdillo;Creature;NiceLands;When Chivalrous Armourdillo enters play, you may heal 3 damage from another Creature. If that Creature still has damage on it, draw a card. ;Flame Princess Vs Fern;chivalrous_armourdillo.png;1;1;6
+Chocolate TaCody;Creature;IcyLands;At the start of your Fight Phase, if any Landscape in this Lane is frozen, deal 1 damage to each Creature target player controls. ;Doubles Tournament;chocolate_tacody.png;2;2;7
+Choose Goose;Hero;;At the start of the game, choose a letter of the alphabet. The first card you play each turn with a name that starts with your chosen letter costs 1 less. ;Kickstarter #2;choose_goose.png;;;
+Chronomancer;Creature;Blue Plains;Each time Chronomancer changes Lanes, gain 1 Action. ;Doubles Tournament;chronomancer.png;2;3;6
+Cinder Construct;Creature;LavaFlats;While you have 1 or fewer cards in your hand, damage dealt to Cinder Construct is reduced by half (rounded up). ;Land of Legends;cinder_construct.png;1;3;5
+Cinnamon Bun;Hero;;Once during your turn, you may deal 2 Damage to one of your Creatures and gain 2 HP. ;Kickstarter #1;cinnamon_bun.png;;;
+Clampire, Sanguine Shell;Creature;Rainbow;When Clampire attacks, heal 1 damage from a friendly Creature. ;Prismo Vs The Lich;clampire,_sanguine_shell.png;1;1;5
+Clone;Spell;Rainbow;Play your next Creature or Building for free if a Creature or Building with that name is in play. ;Doubles Tournament;clone.png;0;;
+Cloud Tower;Building;Blue Plains;Your Creature in this Lane cannot be targeted by your opponent's Spells or Creature abilities. FLOOP >>> Move a Creature you control to your Landscape in this Lane. ;Doubles Tournament;cloud_tower.png;2;;
+Cob Keep;Building;Cornfield;Cob Keep is free to play if any player has 1 or fewer cards in hand. Your Creature in this Lane has +2 ATK and +2 DEF. ;Land of Legends;cob_keep.png;2;;
+Cobnoblify;Spell;Rainbow;Give a Creature Gobble this turn. (If that Creature is replaced this turn, put it under the Creature that replaced it. The new Creature gains its ATK, DEF, and any tokens on it, including damage.) ;Land of Legends;cobnoblify.png;1;;
+Cold Soldier;Creature;IcyLands;`+3 ATK while your opponent does not control a Creature in this Lane. ;Ice King Vs Marceline;cold_soldier.png;1;2;4
+Coldclaw Avalancheetah;Creature;IcyLands;When Coldclaw Avalancheetah enters play, freeze an opponent's Landscape. When a frozen token is removed from any Landscape, heal all damage from Coldclaw Avalancheetah. ;Prismo Vs The Lich;coldclaw_avalancheetah.png;2;3;10
+Collaboration;Teamwork;Rainbow;The first time you or your teammate play a Rainbow Spell during their turn, the other teammate may play a Rainbow Spell with the same cost for free. ;Doubles Tournament;collaboration.png;1;;
+Combatarium;Building;Blue Plains;FLOOP >>> Ready a Creature in this Lane, then deal 1 damage to it. ;Land of Legends;combatarium.png;1;;
+Communication;Teamwork;Rainbow;The first time you or your teammate plays a Rainbow Spell with cost 0 during their turn, the other teammate may copy it and may choose new targets. ;Doubles Tournament;communication.png;1;;
+Community Forge;Building;LavaFlats;All Creatures in this Lane have +2 ATK. ;Peppermint Butler Vs Magic Man;community_forge.png;1;;
+Confectionary Ring;Spell;NiceLands;Each of your Creatures has +2 ATK this turn while attacking a Creature that is on a Cornfield Landscape. ;For The Glory;confectionary_ring.png;1;;
+Conflagration;Spell;LavaFlats;Deal 1 damage to each opposing Creature for each burn token on that Creature. Draw a card. ;Land of Legends;conflagration.png;1;;
+Contribution;Teamwork;Blue Plains;At the start of your or your teammate's Fight Phase, if you or your teammate drew 3 or more cards this turn, the other teammate may draw a card. ;Doubles Tournament;contribution.png;1;;
+Convey Wisdom;Spell;Blue Plains;Look at the top 4 cards of target player's deck and put them back in any order. Then draw a card. ;Doubles Tournament;convey_wisdom.png;1;;
+Cool Cone Cafe;Building;IcyLands;When Cool Cone Cafe enters play, freeze the opposing Landscape in this Lane. Opponents must discard an additional card to remove frozen tokens in this Lane. ;Prismo Vs The Lich;cool_cone_cafe.png;1;;
+Cool Dog;Creature;Blue Plains;Your Creatures on adjacent Lanes may not be attacked. ;Finn Vs Jake;cool_dog.png;2;2;7
+Cooperation;Teamwork;Cornfield;At the start of your team's Fight Phases, if you played no Creatures during your turn, your teammate may play a Creature out of turn with cost 1 or less for free. ;Doubles Tournament;cooperation.png;1;;
+Coordination;Teamwork;IcyLands;While you or your teammate controls a Creature on a frozen Landscape, your team may play Creatures onto frozen Landscapes. ;Doubles Tournament;coordination.png;1;;
+Corn Bat;Creature;Cornfield;Pay 1 action >>> Deal 1 damage to target Creature in this Lane for each different Landscape type you control. ;For The Glory;corn_bat.png;1;2;7
+Corn Dog;Creature;Cornfield;Corn Dog has +1 DEF for each Cornfield Landscape you control. If you control 3 or fewer Cornfield Landscapes, Corn Dog has +1 ATK. ;Finn Vs Jake;corn_dog.png;1;0;12
+Corn Lord;Creature;Cornfield;`+1 ATK for each of your other Cornfield Creatures. ;Finn Vs Jake;corn_lord.png;1;0;7
+Corn Ronin;Creature;Cornfield;`+1 ATK for each adjacent Cornfield Landscape. ;Finn Vs Jake;corn_ronin.png;1;1;6
+Corn Scepter;Spell;Rainbow;Deal 1 damage to target Creature for each Cornfield Landscape you control.;Finn Vs Jake;corn_scepter.png;1;;
+Cornataur;Creature;Cornfield;When Cornataur enters play, deal 1 damage to your opponent for each Cornfield Landscape you control. ;Finn Vs Jake;cornataur.png;2;2;10
+Corns Templar;Creature;Cornfield;FLOOP >>> Heal 1 damage from Corns Templar. ;Fionna Vs Cake;corns_templar.png;1;1;7
+Cortex Channeler;Creature;Rainbow;FLOOP >>> This turn your spells that deal damage to your creatures heal them instead and you may play 'Cerebral Bloodstorm' from your discard pile for its cost.;Custom Community Cards;cortex_channeler.png;2;4;8
+Cosmic Owl;Hero;;Pay 1 Action >>> Look at the top 4 cards of your deck and rearrange them. ;Hero Pack;cosmic_owl.png;;;
+Cotton Devil;Creature;NiceLands;`+1 DEF for each different Landscape type you control. ;For The Glory;cotton_devil.png;2;4;1
+Cotton Eyebat;Creature;NiceLands;While Cotton Eyebat has exactly 4 damage on it, it has +4 ATK. ;Princess Bubblegum Vs Lumpy Space Princess;cotton_eyebat.png;1;1;8
+Cottonpult;Creature;NiceLands;FLOOP >>> Deal 1 damage to target Creature. If Cottonpult has 5 or more damage on it, ready it and heal 1 damage. ;Ice King Vs Marceline;cottonpult.png;1;1;8
+Courageous Armourdillo;Creature;NiceLands;Whump. When Courageous Armourdillo defeats an opposing Creature, you heal 2 HP and deal 2 damage to target opponent. ;Flame Princess Vs Fern;courageous_armourdillo.png;3;4;11
+Courtly Armourdillo;Creature;NiceLands;Whump. When Courtly Armourdillo enters play from your hand, deal 8 damage to each other Creature. ;Land of Legends;courtly_armourdillo.png;6;8;16
+Cow;Creature;Rainbow;;Princess Bubblegum Vs Lumpy Space Princess;cow.png;0;1;5
+Cowsper;Creature;Cornfield;Each adjacent Cornfield Creature has +1 DEF;For The Glory;cowsper.png;2;3;8
+Cozy Kiln;Building;Rainbow;When an opposing burning Creature in this Lane leaves play, burn that Creature's owner. (At the start of their turn, they take 1 damage for each burn token.) ;Flame Princess Vs Fern;cozy_kiln.png;1;;
+Crab Skull Island;Building;SandyLands;FLOOP and pay 1 action >>> If you do not control a Creature in this Lane, reveal cards from the top of your deck until you reveal a Creature, then play it in this Lane for free. Shuffle the other revealed cards into your deck. ;Doubles Tournament;crab_skull_island.png;1;;
+Cranial Buttercream;Spell;Cornfield;Choose a Landscape type. Deal 2 damage to each Creature that is not on the chosen Landscape. ;Land of Legends;cranial_buttercream.png;1;;
+Crazy Cat Lady;Creature;Blue Plains;Rainbow Creatures you control have +1 ATK. ;Fionna Vs Cake;crazy_cat_lady.png;2;1;10
+Creepy Crypt;Building;Blue Plains;When your Creature in this Lane leaves play, deal 2 damage to target opponent. ;Kickstarter #1;creepy_crypt.png;2;;
+Crisis Monarch;Creature;Rainbow;When Crisis Monarch enters play, destroy one of your Barriers and gain its effect. ;Kickstarter #2;crisis_monarch.png;2;9;3
+Cross Pollination;Spell;Rainbow;Each of your Cornfield Creatures has +1 ATK this turn for each different Landscape type you control. ;Finn Vs Jake;cross_pollination.png;2;;
+Crust Crusher;Creature;Cornfield;Crust Crusher can be on a Landscape with another Creature. When the other Creature on this Landscape is dealt damage, deal it to Crust Crusher instead. ;Kickstarter #1;crust_crusher.png;2;2;8
+Crystal Ball;Spell;Rainbow;Name a card and reveal the top card of your deck. If it is the named card, play it for free. ;Peppermint Butler Vs Magic Man;crystal_ball.png;0;;
+Crystal Palace;Building;IcyLands;When a Landscape in this Lane becomes frozen, deal 2 damage to target Creature. ;Ice King Vs Marceline;crystal_palace.png;1;;
+Cuddle Puddle;Spell;NiceLands;All Creatures deal damage equal to their ATK to the opposing Creature in their Lane. Friendly Creatures have +1 ATK. ;Doubles Tournament;cuddle_puddle.png;1;;
+Cull-uh-bye;Spell;NiceLands;Destroy all Creatures with 4 or more ATK. ;Kickstarter #2;cull-uh-bye.png;2;;
+Curse Words;Spell;Cornfield;Choose a letter of the alphabet. Deal 4 damage to Creatures whose names do not begin with the chosen letter. ;Kickstarter #2;curse_words.png;2;;
+Cute Overload;Spell;Rainbow;Destroy any number of your Creatures. Draw a card for each Creature destroyed this way. ;Lemon Grab Vs Gunter;cute_overload.png;0;;
+Cutie;Creature;NiceLands;FLOOP >>> You heal 1 hit point. (Can't go over 25.) ;Princess Bubblegum Vs Lumpy Space Princess;cutie.png;1;0;6
+Cutie Koala;Creature;NiceLands;When Cutie Koala has 4 or more damage on it, it has +2 ATK. ;Doubles Tournament;cutie_koala.png;1;1;8
+Cyclone;Spell;SandyLands;Deal 4 damage to all Creatures that do not cost 1. ;Prismo Vs The Lich;cyclone.png;1;;
+Cyclops;Creature;Rainbow;+1 DEF for each open eye depicted on other Creatures you control. ;Promo;cyclops.png;1;3;1
+Dark Angel;Creature;Useless Swamp;+1 ATK for every 5 cards in your discard pile. ;BMO Vs Lady Rainicorn;dark_angel.png;1;0;5
+Dark-o-Mint;Creature;NiceLands;When Dark-O-Mint is destroyed, target opponent must choose and discard 2 cards. ;Kickstarter #1;dark_o_mint.png;1;4;4
+Darling Cobnoblin;Creature;Cornfield;Gobble. FLOOP >>> Place an :attack_token: on target friendly Creature. ;Flame Princess Vs Fern;darling_cobnoblin.png;1;2;3
+Davey Bones;Creature;Rainbow;+2 ATK while defending against a Creature that is on a SandyLands Landscape. ;For The Glory;davey_bones.png;0;1;4
+Dazzling Eyesnek;Creature;Rainbow;;Land of Legends;dazzling_eyesnek.png;0;1;8
+Death;Hero;;Once during your turn, you may turn a Landscape you control face down to deal 4 Damage to your opponent. ;Kickstarter #1;death.png;;;
+Deforestation;Spell;Cornfield;To play this card, you must exhaust one of your Creatures. Search your deck for a Building and put it into play. Then shuffle your deck. ;Fionna Vs Cake;deforestation.png;2;;
+Delta Domination;Spell;Useless Swamp;Deal damage to target Creature equal to the combined cost of cards you control. ;Kickstarter #2;delta_domination.png;0;;
+Desert Duke Out;Spell;SandyLands;Choose a Lane. Creatures in that Lane attack each other until one is defeated. ;Land of Legends;desert_duke_out.png;1;;
+Diamond Dan;Creature;SandyLands;When Diamond Dan leaves play from a NiceLands Landscape, return it to its owner's hand. ;For The Glory;diamond_dan.png;1;2;2
+Divine Right;Spell;Rainbow;Each player heals 15 HP. ;Kickstarter #2;divine_right.png;2;;
+Djinni Ghost;Creature;Blue Plains;FLOOP >>> Pay 2 less to play your next Spell this turn. ;For The Glory;djinni_ghost.png;1;1;6
+Dogboy;Creature;Rainbow;Discard a card >>> Dogboy has +2 ATK this turn. (Limit: Once per turn.) ;Princess Bubblegum Vs Lumpy Space Princess;dogboy.png;0;0;5
+Domed Stronghold;Building;Blue Plains;Your Creature in this Lane has +2 DEF and cannot be damaged by your opponent's Spells. ;Doubles Tournament;domed_stronghold.png;1;;
+Doubles Jake;Hero;;Once during your turn, when a Creature you control damages an opponent, you may deal 1 Damage to target Creature in one of your Lanes. ;Doubles Tournament;doubles_jake.png;;;
+Dr. Death;Creature;Useless Swamp;FLOOP and destroy a Creature you control >>> Destroy target opposing Creature in this Lane. ;BMO Vs Lady Rainicorn;dr._death.png;2;1;7
+Dr. Pieclops;Creature;NiceLands;Each time you play a Spell, gain 2 HP. If you are already at maximum HP, deal 2 damage to target opponent. ;Land of Legends;dr._pieclops.png;2;4;8
+Dr. Stuffenstein;Creature;NiceLands;FLOOP >>> Heal 2 damage from a Creature on an adjacent Landscape. If Dr. Stuffenstein has 5 or more damage on it, heal 2 damage from each of your Creatures instead. ;Ice King Vs Marceline;dr._stuffenstein.png;2;1;9
+Dragon Claw;Creature;Blue Plains;FLOOP >>> Move one of your Creatures to an empty Lane. ;Finn Vs Jake;dragon_claw.png;1;1;8
+Dragon Foot;Creature;Useless Swamp;Discard a card >>> Dragon Foot has +1 ATK this turn. (Limit: Five times per turn.) ;Princess Bubblegum Vs Lumpy Space Princess;dragon_foot.png;1;1;5
+Dragoon Parrotrooper;Creature;Rainbow;When Dragoon Parrotrooper enters play, move it to an empty Landscape. It cannot be replaced. Ajacent Creatures have -1 ATK. ;Lemon Grab Vs Gunter;dragoon_parrotrooper.png;2;1;8
+Drained Cleric;Creature;Blue Plains;At the start of your turn, move Drained Cleric to an empty Landscape you control. If you cannot, discard a card. ;Lemon Grab Vs Gunter;drained_cleric.png;1;3;5
+Dressage Dance Hall;Building;Rainbow;Dressage Dance Hall counts as a copy of your Landscape in this Lane. ;Kickstarter #1;dressage_dance_hall.png;1;;
+Drop Zone;Spell;Rainbow;Return target Creature you own to your hand. ;Lemon Grab Vs Gunter;drop_zone.png;0;;
+Druid of the Cob;Creature;Cornfield;Flooped Creatures you control have +1 ATK. ;Fionna Vs Cake;druid_of_the_cob.png;1;1;8
+Dualcast Adept;Creature;Blue Plains;At the end of your turn, if you played 2 or more non-Blue Plains cards this turn, draw a card. ;Prismo Vs The Lich;dualcast_adept.png;1;1;8
+Duet;Spell;Rainbow;Heal 1 damage from a Creature you control and 1 damage from a Creature you do not control. ;Doubles Tournament;duet.png;0;;
+Dune Bug Buggie;Creature;SandyLands;When Dune Bug Buggie enters play, you may reveal the top card of your deck. If you reveal a non-SandyLands card, you may play it for free. ;Prismo Vs The Lich;dune_bug_buggie.png;1;3;1
+Duplicast Sorcerer;Creature;Blue Plains;FLOOP >>> If you played 2 or more non-Blue Plains cards this turn, deal 2 damage to each opposing Creature. ;Prismo Vs The Lich;duplicast_sorcerer.png;1;2;4
+Duskama, the Betrayer;Creature;Useless Swamp;When Duskama enters play, each player may discard 1 card to put an :attack_token: on one of their Creatures. ;Peppermint Butler Vs Magic Man;duskama,_the_betrayer.png;1;1;8
+Dynastic Defector;Creature;Rainbow;When Dynastic Defector leaves play, if you own it, you may play it on another player's empty Landscape. ;Kickstarter #2;dynastic_defector.png;2;4;8
+Earth Mover;Creature;Cornfield;`+2 ATK for each facedown Landscape in play. ;Lemon Grab Vs Gunter;earth_mover.png;2;2;10
+Elf Hut;Building;Blue Plains;Pay 1 Action >>> Draw a card for each Creature in this Lane. ;For The Glory;elf_hut.png;1;;
+Eloquent Armourdillo;Creature;NiceLands;When Eloquent Armourdillo replaces a Creature, put an :attack_token: on it. ;Flame Princess Vs Fern;eloquent_armourdillo.png;1;2;8
+Embarrassing Bard;Creature;Blue Plains;FLOOP >>> Draw a card for each of your Flooped Creatures (including this one). ;Finn Vs Jake;embarrassing_bard.png;2;1;5
+Emboldened Retriever;Creature;Blue Plains;Each time Emboldened Retriever attacks, you may draw a card. ;Fionna Vs Cake;emboldened_retriever.png;2;2;7
+Emperor Penguin;Creature;IcyLands;Creatures on frozen Landscapes have -1 ATK. ;Ice King Vs Marceline;emperor_penguin.png;1;1;8
+Enchanted Celebration;Spell;Rainbow;Move target Creature to an adjacent empty Landscape its owner controls. After playing this, you may put it into your teammate's hand. ;Doubles Tournament;enchanted_celebration.png;1;;
+Endearing Elephant;Creature;NiceLands;Whenever Endearing Elephant is targeted by an opponent's Spell, deal 2 damage to target opponent. ;Doubles Tournament;endearing_elephant.png;2;4;4
+Energy Potion;Spell;Cornfield;Gain 2 actions on your next turn. ;Land of Legends;energy_potion.png;1;;
+Erlenmeyer, the Calm;Creature;SandyLands;The second Spell you play each turn costs 1 less. ;Peppermint Butler Vs Magic Man;erlenmeyer,_the_calm.png;1;2;5
+Erupting Colossus;Creature;LavaFlats;While you have 1 or fewer cards in your hand, double the damage dealt to all Creatures by any source. ;Land of Legends;erupting_colossus.png;2;3;10
+Ethan the Ace;Creature;Cornfield;If you played 2 or more Creatures with cost 1 this turn, Ethan the Ace is free to play. ;Land of Legends;ethan_the_ace.png;1;3;4
+Evil Eye;Creature;Rainbow;;Finn Vs Jake;evil_eye.png;0;1;5
+Extraordinary Spider;Creature;Useless Swamp;At the start of your turn, deal 1 damage to target opponent for every 5 cards in your discard pile. ;BMO Vs Lady Rainicorn;extraordinary_spider.png;1;1;7
+Extreme High Five;Spell;Rainbow;Heal or deal 1 damage to target Creature. After playing this, you may put it into your teammate's hand. ;Doubles Tournament;extreme_high_five.png;1;;
+Eye Guy;Creature;Useless Swamp;At the start of your turn, look at the top card of your deck. You may put it on the bottom of your deck. ;For The Glory;eye_guy.png;1;1;8
+Eye See All;Spell;Blue Plains;Reveal the top 5 cards of your deck. Put a card of each Landscape type into your hand and discard the rest. ;Land of Legends;eye_see_all.png;1;;
+Eye Viner;Creature;NiceLands;When Eye Viner enters play, if you have 3 or more Spells in your discard pile, put 3 :attack_token: on Eye Viner. ;;eye_viner.png;1;1;6
+Fairy Shepard;Creature;NiceLands;Each adjacent NiceLands Creature has +2 DEF. ;Princess Bubblegum Vs Lumpy Space Princess;fairy_shepard.png;2;2;9
+Falling Star;Spell;NiceLands;Your Creatures take no damage from opposing Creatures this turn. ;Princess Bubblegum Vs Lumpy Space Princess;falling_star.png;2;;
+Family Gathering;Spell;Rainbow;Choose another player and a Landscape you control. Draw a card for each of their Creatures that match that Landscape type. ;;family_gathering.png;0;;
+Fancy Pants Gnome;Creature;Useless Swamp;FLOOP >>> Deal 1 damage to each opposing Creature that is on a Cornfield Landscape. ;For The Glory;fancy_pants_gnome.png;1;1;6
+Fancy Spa;Building;Blue Plains;At the start of your Fight Phase, if you control an exhausted Creature in this Lane, draw a card. ;Lemon Grab Vs Gunter;fancy_spa.png;1;;
+Fancy Zebracorn;Creature;Cornfield;`+1 DEF for each different Landscape type you control. ;Lemon Grab Vs Gunter;fancy_zebracorn.png;1;2;4
+Farmhouse;Building;Cornfield;Farmhouse counts as an additional Cornfield Landscape you control. ;Fionna Vs Cake;farmhouse.png;2;;
+Fatapillar;Creature;Useless Swamp;`+2 ATK for every 5 cards in your discard pile. ;Princess Bubblegum Vs Lumpy Space Princess;fatapillar.png;2;0;3
+Fatigued Librarian;Creature;Blue Plains;Fatigued Librarian enters play exhausted and does not ready at the start of your turn. Whenever Fatigued Librarian changes Lanes, ready it. ;Lemon Grab Vs Gunter;fatigued_librarian.png;1;3;4
+Feedman;Creature;Cornfield;When Feedman enters play the next Creature you play this turn costs 1 less to play. ;Doubles Tournament;feedman.png;1;1;8
+Fellowship;Teamwork;NiceLands;During your and your teammate's Fight Phase, the first time damage is dealt to an opponent, the other teammate may deal 1 damage to target Creature in one of their Lanes. ;Doubles Tournament;fellowship.png;1;;
+Fenunchaku, the Renegade;Creature;Useless Swamp;When Fenunchaku enters play, discard your hand. ;Peppermint Butler Vs Magic Man;fenunchaku,_the_renegade.png;2;4;10
+Fern;Hero;;Once per turn, when you replace a Creature, the next Creature with cost 1 you play this turn is free. ;Flame Princess Vs Fern;fern.png;;;
+Fiddling Ferret;Creature;Blue Plains;FLOOP >>> Draw a card, then discard a card. If you discard a Rainbow card this way, gain 1 action. ;Fionna Vs Cake;fiddling_ferret.png;1;1;6
+Field of Nightmares;Spell;Cornfield;Deal 1 Damage to your opponent for each card in their hand. ;Finn Vs Jake;field_of_nightmares.png;1;;
+Field Reaper;Creature;Cornfield;To play this card, you must discard a card. When Field Reaper enters play, move target Creature in this Lane to an adjacent empty Lane you control. ;Finn Vs Jake;field_reaper.png;2;1;4
+Field Stalker;Creature;Cornfield;At the start of your turn, each player draws a card. ;Finn Vs Jake;field_stalker.png;1;1;10
+Filthflinger;Creature;Useless Swamp;When another player discards a card from their hand, put an :attack_token: on Filthflinger ;Prismo Vs The Lich;filthflinger.png;1;2;7
+Finn;Hero;;"Creatures you control with no Damage on them have ""FLOOP"" >>> Deal 1 Damage to target Creature ";Finn Vs Jake;finn.png;;;
+Fionna;Hero;;While you control only one Landscape type, your Rainbow Creatures have +1 ATK. ;Fionna Vs Cake;fionna.png;;;
+Fire Dog;Creature;LavaFlats;When Fire Dog enters play, you may deal damage to target Creature equal to the number of burn tokens on all Creatures. ;Flame Princess Vs Fern;fire_dog.png;0;1;6
+Firefly Lamplighter;Creature;LavaFlats;While you have 1 or fewer cards in hand, reveal the top card of your deck. You may play cards revealed in this way. These cards cost 1 additional action for each card that has been played in this way this turn. ;Peppermint Butler Vs Magic Man;firefly_lamplighter.png;2;3;9
+Firestorm of Phoenixes;Creature;LavaFlats;When Firestorm of Phoenixes enters play, if you have 1 or fewer cards in your hand, burn each opposing Creature. ;Land of Legends;firestorm_of_phoenixes.png;1;3;5
+Firm Handshake;Spell;Rainbow;Deal 5 Damage to yourself and target opponent. ;Doubles Tournament;firm_handshake.png;2;;
+Fisher Fish;Creature;Useless Swamp;If Fisher Fish enters play onto a Blue Plains Landscape, deal 2 damage to each opposing player. ;For The Glory;fisher_fish.png;1;2;6
+Flame Princess;Hero;;Burn all opposing Creatures. (Limit: Once per game.) ;Flame Princess Vs Fern;flame_princess.png;;;
+Flameingo Ash Keeper;Creature;LavaFlats;When Flameingo Ash Keeper enters play, you may discard a card to burn an opposing Creature. ;Peppermint Butler Vs Magic Man;flameingo_ash_keeper.png;1;1;8
+Flameingo Blazeling;Creature;LavaFlats;When Flameingo Blazeling damages a Creature, burn that Creature if it wasn't burning. ;Flame Princess Vs Fern;flameingo_blazeling.png;0;1;6
+Flameingo Burnwarden;Creature;LavaFlats;Remove a burn token from an opposing Creature >>> Deal 1 damage to target opponent. ;Flame Princess Vs Fern;flameingo_burnwarden.png;1;2;9
+Flameingo Captain;Creature;LavaFlats;When Flameingo Captain damages an opponent, burn them. (At the start of their turn, they take 1 damage for each Burn token.) ;Flame Princess Vs Fern;flameingo_captain.png;2;3;11
+Flameingo Fireplume Chief;Creature;LavaFlats;Flameingo Fireplume Chief costs 1 less for each Burn token on Creatures. When Fireplume Chief damages a Creature, burn it. ;Flame Princess Vs Fern;flameingo_fireplume_chief.png;4;4;10
+Flameingo Flame Tamer;Creature;LavaFlats;Prevent the first 2 damage dealt to Flameingo Flame Tamer from burning Creatures each turn. ;Land of Legends;flameingo_flame_tamer.png;1;3;6
+Flameingo Flameweaver;Creature;LavaFlats;FLOOP >>> Burn each Creature in target Lane. ;Flame Princess Vs Fern;flameingo_flameweaver.png;1;2;8
+Flameingo Heat Eater;Creature;LavaFlats;The first time you burn a Creature each turn, draw a card. ;Flame Princess Vs Fern;flameingo_heat_eater.png;2;1;9
+Flameingo Hotshot;Creature;LavaFlats;When Flameingo Hotshot attacks a burning Creature, you may deal 2 damage to another Creature. If that other Creature is not burning, burn it. ;Flame Princess Vs Fern;flameingo_hotshot.png;1;2;8
+Flameingo Ignisbeak;Creature;LavaFlats;When Flameingo Ignisbeak attacks, if an opposing Creature in this Lane is burning, Flameingo Ignisbeak targets your opponent instead of the opposing Creature. ;Flame Princess Vs Fern;flameingo_ignisbeak.png;2;3;10
+Floating Ice Palace;Building;IcyLands;Your Creature in this Lane has +1 ATK during your turn for each frozen Landscape. ;Lemon Grab Vs Gunter;floating_ice_palace.png;2;;
+Fluffy Fox;Creature;NiceLands;While Fluffy Fox has 4 or more damage on it, it ignores the first 2 damage dealt to it by opposing Creatures. ;Doubles Tournament;fluffy_fox.png;1;2;6
+Fly Swatter;Creature;Useless Swamp;FLOOP >>> Each opponent discards a card with cost O or reveals a hand with none.;Ice King Vs Marceline;fly_swatter.png;1;1;6
+Form of the Phoenix;Spell;LavaFlats;Put 2 Creatures from your discard pile into play. At the end of your turn, destroy those Creatures. ;Land of Legends;form_of_the_phoenix.png;2;;
+Fortitude Fountain;Building;NiceLands;While this card is in play, your maximum HP is increased by 5. ;Land of Legends;fortitude_fountain.png;1;;
+Foulwater Reviver;Creature;Useless Swamp;FLOOP >>> Play a Creature with cost 1 in your discard pile for free. ;Land of Legends;foulwater_reviver.png;2;3;5
+Fountain of Tears;Building;Rainbow;While your Creature in this Lane has exactly 3 damage on it, it has +3 ATK. ;For The Glory;fountain_of_tears.png;0;;
+Four Star Fudge;Creature;IcyLands;Each time a Landscape becomes frozen, draw a card. ;Doubles Tournament;four_star_fudge.png;2;2;9
+Free Fall;Spell;SandyLands;Each of your Creatures has +1 ATK for each Creature that entered play this turn. ;Lemon Grab Vs Gunter;free_fall.png;1;;
+Freeze Ray;Spell;IcyLands;Freeze target Landscape, then draw a card. ;Ice King Vs Marceline;freeze_ray.png;1;;
+Freezing Point;Spell;IcyLands;Freeze each of your opponent's Landscapes. ;Ice King Vs Marceline;freezing_point.png;2;;
+Friendship Bracelet;Spell;Rainbow;Swap any amount of damage between two of your Creatures. ;Fionna Vs Cake;friendship_bracelet.png;0;;
+Friendship Potion;Spell;Rainbow;Heal 3 damage from target Creature you control and 3 damage from target Creature you do not control. ;Land of Legends;friendship_potion.png;0;;
+Fright Tower;Building;Useless Swamp;Pay 1 Action >>> Target Creature in this Lane has +1 ATK this turn for every 5 cards in your discard pile. ;For The Glory;fright_tower.png;1;;
+Frost Dragon;Creature;IcyLands;Pay 1 Action >>> Freeze a Landscape in this Lane. ;Ice King Vs Marceline;frost_dragon.png;2;2;10
+Frostcrown Avalancheetah;Creature;IcyLands;When Frostcrown enters play, freeze all Landscapes in its Lane. When Frostcrown leaves play, you may remove a Frozen token from one of your Landscapes. ;Prismo Vs The Lich;frostcrown_avalancheetah.png;1;3;4
+Frosted Deanimator;Creature;IcyLands;Frosted Deanimator may be played onto a frozen Landscape. ;Lemon Grab Vs Gunter;frosted_deanimator.png;1;2;6
+Frosted Snowwoman;Creature;IcyLands;When Frosted Snowwoman enters play, freeze both Landscapes in its Lane. ;Lemon Grab Vs Gunter;frosted_snowwoman.png;2;3;5
+Frostfire Potion;Spell;IcyLands;Burn target Creature. Put an :attack_token: on another Creature. Freeze a Landscape. ;Land of Legends;frostfire_potion.png;1;;
+Frosty Frolic;Spell;IcyLands;Target player discards 1 card from their hand for each frozen Landscape they control. ;Ice King Vs Marceline;frosty_frolic.png;2;;
+Frozen BanaNancy;Creature;IcyLands;At the start of your Fight Phase, if there are 1 or more frozen tokens in this Lane, deal 2 damage to target opponent. ;Doubles Tournament;frozen_bananancy.png;1;1;7
+Frozen Fish;Creature;IcyLands;When Frozen Fish deals damage to a Creature, you may freeze a Landscape in this Lane. ;Ice King Vs Marceline;frozen_fish.png;1;1;8
+Frozen Heart;Spell;Rainbow;Deal 1 damage to target Creature. If that Creature is on a frozen Landscape, deal 3 damage instead. ;Ice King Vs Marceline;frozen_heart.png;0;;
+Frozen Lemon Aid;Spell;IcyLands;Count the number of frozen Landscapes, then heal 1 damage from that many friendly Creatures. ;Doubles Tournament;frozen_lemon_aid.png;1;;
+Full Metal Racket;Spell;Rainbow;Deal 2 damage to target Creature. ;For The Glory;full_metal_racket.png;0;;
+FumiGator;Creature;Useless Swamp;FLOOP and pay 1 action >>> Deal 1 damage to each opposing Creature. ;Doubles Tournament;fumigator.png;1;1;6
+Fummy;Creature;SandyLands;FLOOP >>> Gain 1 action this turn. ;BMO Vs Lady Rainicorn;fummy.png;1;2;7
+Funeral Home;Building;Useless Swamp;When an opponent discards a card, your Creature in this Lane has +1 ATK until end of turn. ;Ice King Vs Marceline;funeral_home.png;1;;
+Furious Chick;Creature;Rainbow;`+1 ATK for each damage on it. ;Ice King Vs Marceline;furious_chick.png;0;0;5
+Furious Furor;Spell;Cornfield;Target Creature has +2 ATK this turn for each Flooped Creature you control. ;Fionna Vs Cake;furious_furor.png;1;;
+Furious Hen;Creature;NiceLands;`+1 ATK for each damage on it. ;Ice King Vs Marceline;furious_hen.png;2;0;10
+Furious Phoenix;Creature;LavaFlats;Furious Phoenis has +1 ATK for each burn token on Creatures. ;Flame Princess Vs Fern;furious_phoenix.png;1;1;8
+Furious Rooster;Creature;NiceLands;`+1 ATK for each damage on it. ;Ice King Vs Marceline;furious_rooster.png;1;0;8
+Future Scholar;Creature;Blue Plains;If Future Scholar replaces a Creature, gain 1 action. ;Princess Bubblegum Vs Lumpy Space Princess;future_scholar.png;2;2;8
+Galeblade Tornado;Spell;Blue Plains;Return target friendly Creature to its owner's hand. Return target opposing Creature to its owner's hand. ;Prismo Vs The Lich;galeblade_tornado.png;1;;
+Gallant Armourdillo;Creature;NiceLands;When Gallant Armourdillo replaces a Creature, play the top card of your deck for free. ;Flame Princess Vs Fern;gallant_armourdillo.png;2;3;9
+Genteel Armourdillo;Creature;NiceLands;Whump. When an opposing Creature attacks, you may choose to have it attack Genteel Armourdillo instead. ;Flame Princess Vs Fern;genteel_armourdillo.png;3;3;14
+Gentle Cobnoblin;Creature;Cornfield;Gobble. Gentle Cobnoblin cannot attack (but may defend). ;Land of Legends;gentle_cobnoblin.png;2;4;5
+Geomancer;Creature;Blue Plains;At the start of your turn, you may move Geomancer to an empty Landscape you control. ;Doubles Tournament;geomancer.png;1;2;6
+Geyser Cannon;Building;LavaFlats;While you have 1 or fewer cards in your hand, double the ATK of friendly Creatures in this Lane. ;Land of Legends;geyser_cannon.png;1;;
+Ghost;Creature;Rainbow;`+2 ATK while defending against a Creature that is on a Useless Swamp Landscape. ;For The Glory;ghost.png;0;1;4
+Ghost Chest Burster;Creature;Useless Swamp;When Ghost Chest Burster leaves play, draw the bottom card of your deck. ;For The Glory;ghost_chest_burster.png;1;1;9
+Ghost Hag;Creature;Rainbow;`+2 ATK while defending against a Creature that is on a Blue Plains Landscape. ;For The Glory;ghost_hag.png;0;1;4
+Ghost Ninja;Creature;Blue Plains;When Ghost Ninja deals damage to an opposing player, they cannot play Spells during their next turn. ;For The Glory;ghost_ninja.png;1;2;7
+Ghost Princess;Hero;;Chose any number of players to put 3 random cards from their discard pile into their hand, revealing any Creatures. For each one, they heal 2 HP. Finally, they shuffle their discard piles into their decks. (Limit: Once per game.) ;Kickstarter #2;ghost_princess.png;;;
+Ghost Sorceress;Creature;Blue Plains;After you play your first Spell each turn, draw 2 cards, then discard 1 card. ;Land of Legends;ghost_sorceress.png;2;3;7
+Ghost Tree;Creature;Rainbow;`+2 ATK while defending against a Creature that is on a Cornfield Landscape. ;For The Glory;ghost_tree.png;0;1;4
+Giant Mummy Hand;Creature;SandyLands;FLOOP >>> Deal 1 damage to target Creature for each Cornfield Landscape adjacent to this Lane. ;For The Glory;giant_mummy_hand.png;1;0;7
+Giant Red Salamander;Creature;LavaFlats;;Flame Princess Vs Fern;giant_red_salamander.png;1;4;3
+Giddy Giraffe;Creature;NiceLands;While Giddy Giraffe has 4 or more damage on it, it targets your opponent instead of the opposing Creature. ;Doubles Tournament;giddy_giraffe.png;1;1;8
+Glacial Drift;Spell;IcyLands;Move target friendly Creature to an empty Lane. Freeze an opposing Landscape in that Lane. ;Prismo Vs The Lich;glacial_drift.png;1;;
+Glacier Racer;Creature;IcyLands;`+4 ATK if both Landscapes in this Lane are frozen. ;Lemon Grab Vs Gunter;glacier_racer.png;1;2;6
+Glorious Gramophone;Spell;Blue Plains;Draw 4 cards, then discard any 2 cards. ;Fionna Vs Cake;glorious_gramophone.png;1;;
+Gnome Snot;Spell;Blue Plains;Draw 3 cards. ;Finn Vs Jake;gnome_snot.png;1;;
+Gnome Snot Manufacturing Facility;Building;Useless Swamp;When you would spend an Action to draw a card, draw an additional card. (While your hand has less cards than your opponent's, reduce the cost to play this building by 1 for every additional card.);Custom Community Cards;gnome_snot_manufacturing_facility.png;3;;
+Goat;Creature;Rainbow;If Goat replaces a Creature, draw a card. ;Princess Bubblegum Vs Lumpy Space Princess;goat.png;0;1;4
+Gold Ninja;Creature;Cornfield;When Gold Ninja enters play, deal 1 damage to target Creature for each different Landscape type you control. ;For The Glory;gold_ninja.png;1;2;6
+Golden Axe Stump;Creature;SandyLands;Whenever an opponent draws a card, deal 1 damage to that player. ;For The Glory;golden_axe_stump.png;1;1;7
+Golden Jackal;Creature;Cornfield;FLOOP and discard a SandyLands card >>> Deal 1 damage to each opposing Creature. ;For The Glory;golden_jackal.png;1;1;4
+Gossamer Beam;Spell;Useless Swamp;Target opponent discards a card. You may return a Creature from your discard pile to your hand. ;Prismo Vs The Lich;gossamer_beam.png;1;;
+Gracious Armourdillo;Creature;NiceLands;Whump. When an opposing Creature attacks, you may choose to have it attack Gracious Armourdillo instead. ;Flame Princess Vs Fern;gracious_armourdillo.png;4;4;16
+Granary Weevil;Creature;Useless Swamp;Destroy Granary Weevil >>> Destroy target opposing Creature in this Lane and any Creature with the same name in play. ;Doubles Tournament;granary_weevil.png;2;2;6
+Grand Mummy;Creature;SandyLands;At the start of your turn, you may return Grand Mummy to its owner's hand. If you do, draw 2 cards. ;Lemon Grab Vs Gunter;grand_mummy.png;1;3;3
+Grand Prix;Hero;;Once during your turn, you may put a Creature you played this turn back into your hand, then play it for free and put 3 damage on it. ;Doubles Tournament;grand_prix.png;;;
+Grape Butt;Spell;Cornfield;Play only if you played a non-Cornfield card this turn. Deal S damage to target Creature. ;For The Glory;grape_butt.png;1;;
