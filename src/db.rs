@@ -311,6 +311,30 @@ pub async fn find_card_by_name(pool: &SqlitePool, name: &str) -> Result<Option<S
     .await
 }
 
+pub async fn search_cards_by_partial_name(
+    pool: &SqlitePool,
+    query: &str,
+    limit: i64,
+) -> Result<Vec<StoredCard>, sqlx::Error> {
+    sqlx::query_as::<_, StoredCard>(
+        r#"
+        SELECT id, name, card_type, landscape, ability, card_set, image_path, cost, attack, defense
+        FROM cards
+        WHERE lower(name) LIKE '%' || lower(?) || '%'
+        ORDER BY
+            CASE WHEN lower(name) LIKE lower(?) || '%' THEN 0 ELSE 1 END,
+            length(name) ASC,
+            name COLLATE NOCASE ASC
+        LIMIT ?
+        "#,
+    )
+    .bind(query)
+    .bind(query)
+    .bind(limit)
+    .fetch_all(pool)
+    .await
+}
+
 fn non_empty(value: Option<&str>) -> Option<&str> {
     let trimmed = value?.trim();
     if trimmed.is_empty() {

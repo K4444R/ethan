@@ -17,6 +17,10 @@ struct Handler {
     emoji_map: HashMap<String, String>,
 }
 
+const MULTI_RESULTS_LIMIT: usize = 10;
+const MULTI_RESULTS_QUERY_LIMIT: i64 = 11;
+const MIN_PARTIAL_QUERY_ALNUM_LEN: usize = 4;
+
 #[async_trait]
 impl EventHandler for Handler {
     async fn message(&self, ctx: Context, msg: Message) {
@@ -38,84 +42,84 @@ impl EventHandler for Handler {
 
         match db::find_card_by_name(&self.pool, card_name).await {
             Ok(Some(card)) => {
-                let mut embed = CreateEmbed::new()
-                    .colour(0xe5b61b)
-                    .title(card.name.clone())
-                    .timestamp(Timestamp::now());
-
-                if let Some(value) = card.cost {
-                    embed = embed.field("Cost", value.to_string(), true);
-                }
-                if let Some(value) = card.card_type.filter(|v| !v.trim().is_empty()) {
-                    embed = embed.field("Card Type", value, true);
-                }
-                if let Some(value) = card.landscape.filter(|v| !v.trim().is_empty()) {
-                    let value = if let Some(emoji_name) = landscape_emoji_name(&value) {
-                        format!("{} {value}", emoji_tag(emoji_name, &self.emoji_map))
-                    } else {
-                        value
-                    };
-                    embed = embed.field("Landscape", value, true);
-                }
-                if let Some(value) = card.ability.filter(|v| !v.trim().is_empty()) {
-                    let value = expand_custom_emojis(&value, &self.emoji_map);
-                    embed = embed.field("Ability", value, false);
-                }
-                if let Some(value) = card.card_set.filter(|v| !v.trim().is_empty()) {
-                    embed = embed.field("Set", value, true);
-                }
-                if let Some(value) = card.attack {
-                    embed = embed.field("Attack", value.to_string(), true);
-                }
-                if let Some(value) = card.defense {
-                    embed = embed.field("Defense", value.to_string(), true);
-                }
-
-                let footer = CreateEmbedFooter::new(format!("Card ID: {}", card.id));
-                embed = embed.footer(footer);
-
-                let mut builder = CreateMessage::new();
-
-                if let Some(image_path) = card.image_path.filter(|v| !v.trim().is_empty()) {
-                    let image_path = if Path::new(&image_path).is_absolute()
-                        || image_path.contains('/')
-                        || image_path.contains('\\')
-                    {
-                        image_path
-                    } else {
-                        project_root()
-                            .join("assets")
-                            .join("cards")
-                            .join(image_path)
-                            .to_string_lossy()
-                            .into_owned()
-                    };
-                    
-                    let file_name = Path::new(&image_path)
-                        .file_name()
-                        .and_then(|v| v.to_str())
-                        .unwrap_or("ethan_allfire.png");
-
-                    if let Ok(attachment) = CreateAttachment::path(&image_path).await {
-                        embed = embed.image(format!("attachment://{file_name}"));
-                        builder = builder.add_file(attachment);
-                    }
-                }
-
-                builder = builder.embed(embed);
-
-                if let Err(why) = msg.channel_id.send_message(&ctx.http, builder).await {
-                    println!("Error sending message: {why:?}");
-                }
+                send_card_embed(&ctx, &msg, card, &self.emoji_map).await;
             }
             Ok(None) => {
-                let embed = CreateEmbed::new()
-                    .colour(0xe63a24)
-                    .title("Card Not Found")
-                    .description(format!("Card '{card_name}' not found in the database."))
-                    .timestamp(Timestamp::now());
-                let builder = CreateMessage::new().embed(embed);
-                let _ = msg.channel_id.send_message(&ctx.http, builder).await;
+                let query_alnum_len = card_name.chars().filter(|c| c.is_alphanumeric()).count();
+                if query_alnum_len < MIN_PARTIAL_QUERY_ALNUM_LEN {
+                    let embed = CreateEmbed::new()
+                        .colour(0xe63a24)
+                        .title("Search Too Broad")
+                        .description(format!(
+                            "Search `{card_name}` is too broad. Please type at least 4 letters or a more specific card name."
+                        ))
+                        .timestamp(Timestamp::now());
+                    let builder = CreateMessage::new().embed(embed);
+                    let _ = msg.channel_id.send_message(&ctx.http, builder).await;
+                    return;
+                }
+
+                match db::search_cards_by_partial_name(
+                    &self.pool,
+                    card_name,
+                    MULTI_RESULTS_QUERY_LIMIT,
+                )
+                .await
+                {
+                    Ok(cards) if cards.is_empty() => {
+                        let embed = CreateEmbed::new()
+                            .colour(0xe63a24)
+                            .title("Card Not Found")
+                            .description(format!("Card '{card_name}' not found in the database."))
+                            .timestamp(Timestamp::now());
+                        let builder = CreateMessage::new().embed(embed);
+                        let _ = msg.channel_id.send_message(&ctx.http, builder).await;
+                    }
+                    Ok(mut cards) if cards.len() == 1 => {
+                        if let Some(card) = cards.pop() {
+                            send_card_embed(&ctx, &msg, card, &self.emoji_map).await;
+                        }
+                    }
+                    Ok(cards) => {
+                        let truncated = cards.len() > MULTI_RESULTS_LIMIT;
+                        let listed = cards.into_iter().take(MULTI_RESULTS_LIMIT);
+
+                        let mut embed = CreateEmbed::new()
+                            .colour(0xe5b61b)
+                            .title("Multiple Results")
+                            .description(format!(
+                                "Found multiple cards for `{card_name}`. Please be more specific:"
+                            ))
+                            .timestamp(Timestamp::now());
+
+                        for (index, card) in listed.enumerate() {
+                            embed = embed.field(format!("{}.", index + 1), card.name, false);
+                        }
+
+                        if truncated {
+                            embed = embed.field(
+                                "Tip",
+                                format!(
+                                    "Showing first {MULTI_RESULTS_LIMIT} results. Add more words (for example, set/version) to narrow it down."
+                                ),
+                                false,
+                            );
+                        }
+
+                        let builder = CreateMessage::new().embed(embed);
+                        let _ = msg.channel_id.send_message(&ctx.http, builder).await;
+                    }
+                    Err(why) => {
+                        println!("DB read error: {why:?}");
+                        let embed = CreateEmbed::new()
+                            .colour(0xe63a24)
+                            .title("Database Error")
+                            .description("Error reading from the database.")
+                            .timestamp(Timestamp::now());
+                        let builder = CreateMessage::new().embed(embed);
+                        let _ = msg.channel_id.send_message(&ctx.http, builder).await;
+                    }
+                }
             }
             Err(why) => {
                 println!("DB read error: {why:?}");
@@ -132,6 +136,83 @@ impl EventHandler for Handler {
 
     async fn ready(&self, _: Context, ready: Ready) {
         println!("{} is connected!", ready.user.name);
+    }
+}
+
+async fn send_card_embed(
+    ctx: &Context,
+    msg: &Message,
+    card: db::StoredCard,
+    emoji_map: &HashMap<String, String>,
+) {
+    let mut embed = CreateEmbed::new()
+        .colour(0xe5b61b)
+        .title(card.name.clone())
+        .timestamp(Timestamp::now());
+
+    if let Some(value) = card.cost {
+        embed = embed.field("Cost", value.to_string(), true);
+    }
+    if let Some(value) = card.card_type.filter(|v| !v.trim().is_empty()) {
+        embed = embed.field("Card Type", value, true);
+    }
+    if let Some(value) = card.landscape.filter(|v| !v.trim().is_empty()) {
+        let value = if let Some(emoji_name) = landscape_emoji_name(&value) {
+            format!("{} {value}", emoji_tag(emoji_name, emoji_map))
+        } else {
+            value
+        };
+        embed = embed.field("Landscape", value, true);
+    }
+    if let Some(value) = card.ability.filter(|v| !v.trim().is_empty()) {
+        let value = expand_custom_emojis(&value, emoji_map);
+        embed = embed.field("Ability", value, false);
+    }
+    if let Some(value) = card.card_set.filter(|v| !v.trim().is_empty()) {
+        embed = embed.field("Set", value, true);
+    }
+    if let Some(value) = card.attack {
+        embed = embed.field("Attack", value.to_string(), true);
+    }
+    if let Some(value) = card.defense {
+        embed = embed.field("Defense", value.to_string(), true);
+    }
+
+    let footer = CreateEmbedFooter::new(format!("Card ID: {}", card.id));
+    embed = embed.footer(footer);
+
+    let mut builder = CreateMessage::new();
+
+    if let Some(image_path) = card.image_path.filter(|v| !v.trim().is_empty()) {
+        let image_path = if Path::new(&image_path).is_absolute()
+            || image_path.contains('/')
+            || image_path.contains('\\')
+        {
+            image_path
+        } else {
+            project_root()
+                .join("assets")
+                .join("cards")
+                .join(image_path)
+                .to_string_lossy()
+                .into_owned()
+        };
+
+        let file_name = Path::new(&image_path)
+            .file_name()
+            .and_then(|v| v.to_str())
+            .unwrap_or("ethan_allfire.jpg");
+
+        if let Ok(attachment) = CreateAttachment::path(&image_path).await {
+            embed = embed.image(format!("attachment://{file_name}"));
+            builder = builder.add_file(attachment);
+        }
+    }
+
+    builder = builder.embed(embed);
+
+    if let Err(why) = msg.channel_id.send_message(&ctx.http, builder).await {
+        println!("Error sending message: {why:?}");
     }
 }
 
