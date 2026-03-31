@@ -49,6 +49,7 @@ async fn init_schema(pool: &SqlitePool) -> Result<(), sqlx::Error> {
 
     if table_exists.is_none() {
         create_cards_table(pool).await?;
+        create_card_images_table(pool).await?;
         return Ok(());
     }
 
@@ -96,6 +97,8 @@ async fn init_schema(pool: &SqlitePool) -> Result<(), sqlx::Error> {
 
     normalize_excel_escaped_prefixes(pool).await?;
     enforce_cards_name_uniqueness(pool).await?;
+    create_card_images_table(pool).await?;
+    backfill_card_images_from_legacy_column(pool).await?;
 
     Ok(())
 }
@@ -121,6 +124,36 @@ async fn create_cards_table(pool: &SqlitePool) -> Result<(), sqlx::Error> {
     .await?;
 
     enforce_cards_name_uniqueness(pool).await?;
+
+    Ok(())
+}
+
+async fn create_card_images_table(pool: &SqlitePool) -> Result<(), sqlx::Error> {
+    sqlx::query(
+        r#"
+        CREATE TABLE IF NOT EXISTS card_images (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            card_id INTEGER NOT NULL,
+            image_path TEXT NOT NULL,
+            sort_order INTEGER NOT NULL DEFAULT 1,
+            FOREIGN KEY(card_id) REFERENCES cards(id) ON DELETE CASCADE
+        );
+        "#,
+    )
+    .execute(pool)
+    .await?;
+
+    sqlx::query(
+        "CREATE UNIQUE INDEX IF NOT EXISTS idx_card_images_unique_path_per_card ON card_images(card_id, image_path COLLATE NOCASE);",
+    )
+    .execute(pool)
+    .await?;
+
+    sqlx::query(
+        "CREATE INDEX IF NOT EXISTS idx_card_images_card_sort ON card_images(card_id, sort_order, id);",
+    )
+    .execute(pool)
+    .await?;
 
     Ok(())
 }
@@ -214,7 +247,7 @@ async fn enforce_cards_name_uniqueness(pool: &SqlitePool) -> Result<(), sqlx::Er
     Ok(())
 }
 
-pub async fn insert_card(pool: &SqlitePool, card: &Card<'_>) -> Result<(), sqlx::Error> {
+pub async fn insert_card(pool: &SqlitePool, card: &Card<'_>) -> Result<i64, sqlx::Error> {
     sqlx::query(
         r#"
         INSERT INTO cards (
@@ -252,7 +285,12 @@ pub async fn insert_card(pool: &SqlitePool, card: &Card<'_>) -> Result<(), sqlx:
     .execute(pool)
     .await?;
 
-    Ok(())
+    let row: (i64,) = sqlx::query_as("SELECT id FROM cards WHERE lower(name) = lower(?) LIMIT 1")
+        .bind(card.name)
+        .fetch_one(pool)
+        .await?;
+
+    Ok(row.0)
 }
 
 pub async fn count_cards(pool: &SqlitePool) -> Result<i64, sqlx::Error> {
@@ -277,23 +315,52 @@ pub async fn import_cards_from_csv(pool: &SqlitePool, csv_path: &str) -> Result<
             continue;
         }
 
+        let image_paths = split_image_paths(non_empty(record.get(5)).map(normalize_excel_text));
+        let primary_image = image_paths.first().map(String::as_str);
+
         let card = Card {
             name,
             card_type: non_empty(record.get(1)).map(normalize_excel_text),
             landscape: non_empty(record.get(2)).map(normalize_excel_text),
             ability: non_empty(record.get(3)).map(normalize_excel_text),
             card_set: non_empty(record.get(4)).map(normalize_excel_text),
-            image_path: non_empty(record.get(5)).map(normalize_excel_text),
+            image_path: primary_image,
             cost: parse_optional_i32(record.get(6)),
             attack: parse_optional_i32(record.get(7)),
             defense: parse_optional_i32(record.get(8)),
         };
 
-        insert_card(pool, &card).await.map_err(|e| format!("DB insert error: {e}"))?;
+        let card_id = insert_card(pool, &card).await.map_err(|e| format!("DB insert error: {e}"))?;
+        replace_card_images(pool, card_id, &image_paths)
+            .await
+            .map_err(|e| format!("DB image insert error: {e}"))?;
         inserted += 1;
     }
 
     Ok(inserted)
+}
+
+pub async fn list_card_image_paths(pool: &SqlitePool, card_id: i64) -> Result<Vec<String>, sqlx::Error> {
+    let rows: Vec<(String,)> = sqlx::query_as(
+        r#"
+        SELECT image_path
+        FROM card_images
+        WHERE card_id = ?
+        ORDER BY sort_order ASC, id ASC
+        "#,
+    )
+    .bind(card_id)
+    .fetch_all(pool)
+    .await?;
+
+    let mut image_paths = Vec::new();
+    for (raw_path,) in rows {
+        for piece in raw_path.split('|').map(str::trim).filter(|v| !v.is_empty()) {
+            image_paths.push(piece.to_string());
+        }
+    }
+
+    Ok(image_paths)
 }
 
 pub async fn find_card_by_name(pool: &SqlitePool, name: &str) -> Result<Option<StoredCard>, sqlx::Error> {
@@ -369,6 +436,66 @@ fn normalize_excel_text(value: &str) -> &str {
     }
 
     value
+}
+
+fn split_image_paths(raw: Option<&str>) -> Vec<String> {
+    let Some(raw) = raw else {
+        return Vec::new();
+    };
+
+    raw.split('|')
+        .map(str::trim)
+        .filter(|v| !v.is_empty())
+        .map(ToOwned::to_owned)
+        .collect()
+}
+
+async fn replace_card_images(
+    pool: &SqlitePool,
+    card_id: i64,
+    image_paths: &[String],
+) -> Result<(), sqlx::Error> {
+    let mut tx = pool.begin().await?;
+
+    sqlx::query("DELETE FROM card_images WHERE card_id = ?")
+        .bind(card_id)
+        .execute(&mut *tx)
+        .await?;
+
+    for (index, image_path) in image_paths.iter().enumerate() {
+        sqlx::query(
+            "INSERT INTO card_images (card_id, image_path, sort_order) VALUES (?, ?, ?)",
+        )
+        .bind(card_id)
+        .bind(image_path)
+        .bind((index as i64) + 1)
+        .execute(&mut *tx)
+        .await?;
+    }
+
+    tx.commit().await?;
+    Ok(())
+}
+
+async fn backfill_card_images_from_legacy_column(pool: &SqlitePool) -> Result<(), sqlx::Error> {
+    sqlx::query(
+        r#"
+        INSERT INTO card_images (card_id, image_path, sort_order)
+        SELECT c.id, trim(c.image_path), 1
+        FROM cards c
+        WHERE c.image_path IS NOT NULL
+          AND trim(c.image_path) <> ''
+          AND NOT EXISTS (
+              SELECT 1
+              FROM card_images ci
+              WHERE ci.card_id = c.id
+          );
+        "#,
+    )
+    .execute(pool)
+    .await?;
+
+    Ok(())
 }
 
 async fn normalize_excel_escaped_prefixes(pool: &SqlitePool) -> Result<(), sqlx::Error> {

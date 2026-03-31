@@ -42,7 +42,7 @@ impl EventHandler for Handler {
 
         match db::find_card_by_name(&self.pool, card_name).await {
             Ok(Some(card)) => {
-                send_card_embed(&ctx, &msg, card, &self.emoji_map).await;
+                send_card_embed(&ctx, &msg, &self.pool, card, &self.emoji_map).await;
             }
             Ok(None) => {
                 let query_alnum_len = card_name.chars().filter(|c| c.is_alphanumeric()).count();
@@ -143,6 +143,7 @@ impl EventHandler for Handler {
 async fn send_card_embed(
     ctx: &Context,
     msg: &Message,
+    pool: &SqlitePool,
     card: db::StoredCard,
     emoji_map: &HashMap<String, String>,
 ) {
@@ -184,36 +185,75 @@ async fn send_card_embed(
 
     let mut builder = CreateMessage::new();
 
-    if let Some(image_path) = card.image_path.filter(|v| !v.trim().is_empty()) {
-        let image_path = if Path::new(&image_path).is_absolute()
-            || image_path.contains('/')
-            || image_path.contains('\\')
-        {
-            image_path
-        } else {
-            project_root()
-                .join("assets")
-                .join("cards")
-                .join(image_path)
-                .to_string_lossy()
-                .into_owned()
-        };
+    let mut image_paths = match db::list_card_image_paths(pool, card.id).await {
+        Ok(paths) => paths,
+        Err(why) => {
+            println!("DB image read error: {why:?}");
+            Vec::new()
+        }
+    };
 
-        let file_name = Path::new(&image_path)
-            .file_name()
-            .and_then(|v| v.to_str())
-            .unwrap_or("ethan_allfire.jpg");
-
-        if let Ok(attachment) = CreateAttachment::path(&image_path).await {
-            embed = embed.image(format!("attachment://{file_name}"));
-            builder = builder.add_file(attachment);
+    if image_paths.is_empty() {
+        if let Some(legacy_path) = card.image_path.filter(|v| !v.trim().is_empty()) {
+            image_paths.push(legacy_path);
         }
     }
 
-    builder = builder.embed(embed);
+    if image_paths.is_empty() {
+        builder = builder.embed(embed);
+    } else {
+        let mut sent_any_image = false;
+
+        for (index, image_path) in image_paths.into_iter().enumerate() {
+            let resolved_path = resolve_card_image_path(&image_path);
+            let fallback_name = format!("card_{}_{}.jpg", card.id, index + 1);
+            let file_name = Path::new(&resolved_path)
+                .file_name()
+                .and_then(|v| v.to_str())
+                .unwrap_or(&fallback_name)
+                .to_string();
+
+            if let Ok(attachment) = CreateAttachment::path(&resolved_path).await {
+                builder = builder.add_file(attachment);
+
+                if !sent_any_image {
+                    embed = embed.image(format!("attachment://{file_name}"));
+                    builder = builder.embed(embed.clone());
+                    sent_any_image = true;
+                } else {
+                    let mut extra_embed = CreateEmbed::new()
+                        .colour(0xe5b61b)
+                        .image(format!("attachment://{file_name}"));
+
+                    if index == 1 {
+                        extra_embed = extra_embed.title("Alternative Card Art");
+                    }
+
+                    builder = builder.add_embed(extra_embed);
+                }
+            }
+        }
+
+        if !sent_any_image {
+            builder = builder.embed(embed);
+        }
+    }
 
     if let Err(why) = msg.channel_id.send_message(&ctx.http, builder).await {
         println!("Error sending message: {why:?}");
+    }
+}
+
+fn resolve_card_image_path(image_path: &str) -> String {
+    if Path::new(image_path).is_absolute() || image_path.contains('/') || image_path.contains('\\') {
+        image_path.to_string()
+    } else {
+        project_root()
+            .join("assets")
+            .join("cards")
+            .join(image_path)
+            .to_string_lossy()
+            .into_owned()
     }
 }
 

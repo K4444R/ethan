@@ -827,7 +827,7 @@ Shock Box;Spell;Rainbow;Each player may choose up to 3 cards from their discard 
 Barrow Baron;Creature;Useless Swamp;Barrow Baron costs 1 less to play for every 5 cards in an opponent's discard pile.;Prismo Vs The Lich;barrow_baron.jpg;3;5;12
 Spillith, the Crippler;Creature;SandyLands;When Spillith enters play, discard the top 3 cards of your deck. For each discarded Spell, deal 2 damage to target Creature.;Peppermint Butler Vs Magic Man;spillith,_the_crippler.jpg;1;3;5
 The Card Dweeb;Hero;;At the beginning of your turn go to carddweeb.com/Random. You may play the card shown without paying its cost. If you don't, draw a card. (Creatures and buildings become token copies);Custom Cards;the_card_dweeb.jpg;;;
-King Pizza Time;Spell;Cornfield;Deal 1 damage to your opponent for each card in their hand. ;Tournament Winner Card Art;kingpizzatime.jpg;1;;
-JeffPattonMagic;Building;NiceLands;FLOOP and destroy your Creature in this Lane >>> Play the top 2 cards of your deck for free. ;Tournament Winner Card Art;jeffpattonmagic.jpg;2;;
-PichuisPro;Building;Rainbow;The opposing Creature in this Lane has -2 DEF. ;Tournament Winner Card Art;pichuispro.jpg;1;;
-NotAThotScott;Creature;Useless Swamp;When TailGator enters play, draw a card for each Creature placed into your discard pile this turn. ;Tournament Winner Card Art;notathotscott.jpg;1;2;6
+King Pizza Time;Spell;Cornfield;Deal 1 damage to your opponent for each card in their hand. ;Tournament Winner Card Art;kingpizzatime.jpg|kingpizzatime2.jpg;1;;
+JeffPattonMagic;Building;NiceLands;FLOOP and destroy your Creature in this Lane >>> Play the top 2 cards of your deck for free. ;Tournament Winner Card Art;jeffpattonmagic.jpg|jeffpattonmagic2.jpg;2;;
+PichuisPro;Building;Rainbow;The opposing Creature in this Lane has -2 DEF. ;Tournament Winner Card Art;pichuispro.jpg|pichuispro2.jpg;1;;
+NotAThotScott;Creature;Useless Swamp;When TailGator enters play, draw a card for each Creature placed into your discard pile this turn. ;Tournament Winner Card Art;notathotscott.jpg|notathotscott2.jpg;1;2;6
