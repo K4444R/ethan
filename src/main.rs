@@ -101,7 +101,7 @@ impl EventHandler for Handler {
                             embed = embed.field(
                                 "Tip",
                                 format!(
-                                    "Showing first {MULTI_RESULTS_LIMIT} results. Add more words (for example, set/version) to narrow it down."
+                                    "Showing first {MULTI_RESULTS_LIMIT} results. Add more words to narrow it down."
                                 ),
                                 false,
                             );
