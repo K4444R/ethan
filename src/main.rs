@@ -75,20 +75,21 @@ impl EventHandler for Handler {
                         let builder = CreateMessage::new().embed(embed);
                         let _ = msg.channel_id.send_message(&ctx.http, builder).await;
                     }
-                    Ok(mut cards) if cards.len() == 1 => {
-                        if let Some(card) = cards.pop() {
-                            send_card_embed(&ctx, &msg, card, &self.emoji_map).await;
-                        }
-                    }
                     Ok(cards) => {
                         let truncated = cards.len() > MULTI_RESULTS_LIMIT;
+                        let visible_count = cards.len().min(MULTI_RESULTS_LIMIT);
                         let listed = cards.into_iter().take(MULTI_RESULTS_LIMIT);
+                        let has_single = visible_count == 1;
 
                         let mut embed = CreateEmbed::new()
                             .colour(0xe5b61b)
-                            .title("Multiple Results")
+                            .title(if has_single {
+                                "Possible Match"
+                            } else {
+                                "Multiple Results"
+                            })
                             .description(format!(
-                                "Found multiple cards for `{card_name}`. Please be more specific:"
+                                "Found similar cards for `{card_name}`. Please type the full card name:"
                             ))
                             .timestamp(Timestamp::now());
 
