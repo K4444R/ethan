@@ -60,7 +60,7 @@ Green Cactiball;Creature;SandyLands;+2 ATK for each Green Cactiball you control.
 Green Mermaid;Creature;Useless Swamp;Destroy Green Mermaid >>> Deal 1 damage to each opposing Creature.;BMO Vs Lady Rainicorn;green_mermaid.jpg;1;1;9
 Green Merman;Creature;Useless Swamp;FLOOP >>> Put the top card of your deck into your discard pile. Deal damage to each opposing Creature equal to the discarded card's action cost.;BMO Vs Lady Rainicorn;green_merman.jpg;2;0;6
 Hot Eyebat;Creature;Useless Swamp;Play Hot Eyebat only if you have 10 or more cards in your discard pile.;BMO Vs Lady Rainicorn;hot_eyebat.jpg;1;4;4
-Immortal Maize Walker;Creature;Useless Swamp;While Immortal Maize Walker is on a Cornfield Landscape, its ATK valve is tripled.;BMO Vs Lady Rainicorn;immortal_maize_walker.jpg;2;2;8
+Immortal Maize Walker;Creature;Useless Swamp;While Immortal Maize Walker is on a Cornfield Landscape, its ATK value is tripled.;BMO Vs Lady Rainicorn;immortal_maize_walker.jpg;2;2;8
 Lost Golem;Creature;SandyLands;Lost Golem costs 1 less to play for each other Creature you have played this turn.;BMO Vs Lady Rainicorn;lost_golem.jpg;3;5;6
 Mace Stump;Creature;Useless Swamp;Destroy Mace Stump >>> Target opponent discards a card for every 5 cards in your discard pile.;BMO Vs Lady Rainicorn;mace_stump.jpg;1;3;3
 Mouthball;Creature;Useless Swamp;+2 DEF for every 5 cards in your discard pile.;BMO Vs Lady Rainicorn;mouthball.jpg;1;2;4
@@ -750,7 +750,7 @@ Hot Wheel;Creature;LavaFlats;Pay 1 action >>> Draw 1 card and reveal it. Then, b
 Furious Phoenix;Creature;LavaFlats;Furious Phoenis has +1 ATK for each burn token on Creatures.;Flame Princess Vs Fern;furious_phoenix.jpg;1;1;8
 Fire Dog;Creature;LavaFlats;When Fire Dog enters play, you may deal damage to target Creature equal to the number of burn tokens on all Creatures.;Flame Princess Vs Fern;fire_dog.jpg;0;1;6
 Molten Potion;Spell;LavaFlats;Burn target Creature. Deal 2 damage to each opposing burning Creature.;Flame Princess Vs Fern;molten_potion.jpg;1;;
-Hampire, Pig of the Night;Creature;Rainbow;When Hampire attacks, you heal HP equal to it's ATK.;Flame Princess Vs Fern;hampire,_pig_of_the_night.jpg;1;3;1
+Hampire, Pig of the Night;Creature;Rainbow;When Hampire attacks, you heal HP equal to its ATK.;Flame Princess Vs Fern;hampire,_pig_of_the_night.jpg;1;3;1
 Volcanic Vitality;Spell;LavaFlats;Burn each opposing Creature once for each burn token they have on them.;Flame Princess Vs Fern;volcanic_vitality.jpg;2;;
 Scorchstone Gateway;Building;LavaFlats;FLOOP and pay 1 action >>> Burn target Creature in this Lane.;Flame Princess Vs Fern;scorchstone_gateway.jpg;0;;
 Hot Huts;Building;LavaFlats;When you burn an opposing Creature, deal 1 additional damage to it.;Flame Princess Vs Fern;hot_huts.jpg;1;;

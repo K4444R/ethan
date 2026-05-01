@@ -19,7 +19,7 @@ struct Handler {
 
 const MULTI_RESULTS_LIMIT: usize = 10;
 const MULTI_RESULTS_QUERY_LIMIT: i64 = 11;
-const MIN_PARTIAL_QUERY_ALNUM_LEN: usize = 4;
+const MIN_PARTIAL_QUERY_ALNUM_LEN: usize = 3;
 
 #[async_trait]
 impl EventHandler for Handler {
