@@ -2,6 +2,7 @@ use std::collections::HashMap;
 use std::path::Path;
 
 use crate::{db, emoji, project_root};
+use serenity::all::ReactionType;
 use serenity::async_trait;
 use serenity::builder::{CreateAttachment, CreateEmbed, CreateEmbedFooter, CreateMessage};
 use serenity::model::channel::Message;
@@ -25,6 +26,11 @@ impl EventHandler for Handler {
         let Some(raw_query) = msg.content.strip_prefix("!ethan") else {
             return;
         };
+        
+        let ethan_emoji = emoji::emoji_tag("ethan_allfire", &self.emoji_map);
+        if let Ok(ethan_reaction) = ReactionType::try_from(ethan_emoji) {
+            let _ = msg.react(&ctx.http, ethan_reaction).await;
+        }
 
         let (use_image_response, card_name) = parse_query(raw_query);
         if card_name.is_empty() {
@@ -302,10 +308,10 @@ async fn collect_card_image_paths(pool: &SqlitePool, card: &db::StoredCard) -> V
         }
     };
 
-    if image_paths.is_empty() {
-        if let Some(legacy_path) = card.image_path.as_deref().filter(|v| !v.trim().is_empty()) {
-            image_paths.push(legacy_path.to_string());
-        }
+    if image_paths.is_empty()
+        && let Some(legacy_path) = card.image_path.as_deref().filter(|v| !v.trim().is_empty())
+    {
+        image_paths.push(legacy_path.to_string());
     }
 
     image_paths

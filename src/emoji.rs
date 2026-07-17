@@ -157,7 +157,7 @@ fn parse_emoji_tag(raw: &str) -> Option<(String, String)> {
     let inner = &value[1..value.len() - 1];
     let mut parts = inner.split(':');
     let head = parts.next()?;
-    if head != "" && head != "a" {
+    if !head.is_empty() && head != "a" {
         return None;
     }
 
