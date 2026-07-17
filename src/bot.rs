@@ -1,0 +1,334 @@
+use std::collections::HashMap;
+use std::path::Path;
+
+use crate::{db, emoji, project_root};
+use serenity::async_trait;
+use serenity::builder::{CreateAttachment, CreateEmbed, CreateEmbedFooter, CreateMessage};
+use serenity::model::channel::Message;
+use serenity::model::gateway::Ready;
+use serenity::model::Timestamp;
+use serenity::prelude::*;
+use sqlx::SqlitePool;
+
+pub struct Handler {
+    pub pool: SqlitePool,
+    pub emoji_map: HashMap<String, String>,
+}
+
+const MULTI_RESULTS_LIMIT: usize = 10;
+const MULTI_RESULTS_QUERY_LIMIT: i64 = 11;
+const MIN_PARTIAL_QUERY_ALNUM_LEN: usize = 3;
+
+#[async_trait]
+impl EventHandler for Handler {
+    async fn message(&self, ctx: Context, msg: Message) {
+        let Some(raw_query) = msg.content.strip_prefix("!ethan") else {
+            return;
+        };
+
+        let (use_image_response, card_name) = parse_query(raw_query);
+        if card_name.is_empty() {
+            send_intro_message(&ctx, &msg, &self.emoji_map).await;
+            return;
+        }
+
+        match db::find_card_by_name(&self.pool, card_name).await {
+            Ok(Some(card)) => {
+                if use_image_response {
+                    send_card_image(&ctx, &msg, &self.pool, card).await;
+                } else {
+                    send_card_embed(&ctx, &msg, &self.pool, card, &self.emoji_map).await;
+                }
+            }
+            Ok(None) => {
+                let query_alnum_len = card_name.chars().filter(|c| c.is_alphanumeric()).count();
+                if query_alnum_len < MIN_PARTIAL_QUERY_ALNUM_LEN {
+                    send_status_embed(
+                        &ctx,
+                        &msg,
+                        0xe63a24,
+                        "Search Too Broad",
+                        format!(
+                            "Search `{card_name}` is too broad. Please type at least 4 letters or a more specific card name."
+                        ),
+                    )
+                    .await;
+                    return;
+                }
+
+                match db::search_cards_by_partial_name(&self.pool, card_name, MULTI_RESULTS_QUERY_LIMIT).await {
+                    Ok(cards) if cards.is_empty() => {
+                        send_status_embed(
+                            &ctx,
+                            &msg,
+                            0xe63a24,
+                            "Card Not Found",
+                            format!("Card '{card_name}' not found in the database."),
+                        )
+                        .await;
+                    }
+                    Ok(cards) => {
+                        send_multi_result_embed(&ctx, &msg, card_name, cards).await;
+                    }
+                    Err(why) => {
+                        println!("DB read error: {why:?}");
+                        send_status_embed(
+                            &ctx,
+                            &msg,
+                            0xe63a24,
+                            "Database Error",
+                            "Error reading from the database.",
+                        )
+                        .await;
+                    }
+                }
+            }
+            Err(why) => {
+                println!("DB read error: {why:?}");
+                send_status_embed(
+                    &ctx,
+                    &msg,
+                    0xe63a24,
+                    "Database Error",
+                    "Error reading from the database.",
+                )
+                .await;
+            }
+        }
+    }
+
+    async fn ready(&self, _: Context, ready: Ready) {
+        println!("{} is connected!", ready.user.name);
+    }
+}
+
+async fn send_intro_message(ctx: &Context, msg: &Message, emoji_map: &HashMap<String, String>) {
+    let ethan_emoji = emoji::emoji_tag("ethan_allfire", emoji_map);
+    let embed = CreateEmbed::new()
+        .colour(0xe5b61b)
+        .description(format!("Hello, I am Ethan! {ethan_emoji}\nTry: ```!ethan <card name>```\nor: ```!ethan -img <card name>``` for card image"))
+        .timestamp(Timestamp::now());
+    let builder = CreateMessage::new().embed(embed);
+    let _ = msg.channel_id.send_message(&ctx.http, builder).await;
+}
+
+async fn send_status_embed(
+    ctx: &Context,
+    msg: &Message,
+    colour: u32,
+    title: &str,
+    description: impl Into<String>,
+) {
+    let embed = CreateEmbed::new()
+        .colour(colour)
+        .title(title)
+        .description(description)
+        .timestamp(Timestamp::now());
+    let builder = CreateMessage::new().embed(embed);
+    let _ = msg.channel_id.send_message(&ctx.http, builder).await;
+}
+
+async fn send_multi_result_embed(ctx: &Context, msg: &Message, card_name: &str, cards: Vec<db::StoredCard>) {
+    let truncated = cards.len() > MULTI_RESULTS_LIMIT;
+    let visible_count = cards.len().min(MULTI_RESULTS_LIMIT);
+    let listed = cards.into_iter().take(MULTI_RESULTS_LIMIT);
+    let has_single = visible_count == 1;
+
+    let mut embed = CreateEmbed::new()
+        .colour(0xe5b61b)
+        .title(if has_single { "Possible Match" } else { "Multiple Results" })
+        .description(format!("Found similar cards for `{card_name}`. Please type the full card name:"))
+        .timestamp(Timestamp::now());
+
+    for (index, card) in listed.enumerate() {
+        embed = embed.field(format!("{}.", index + 1), card.name, false);
+    }
+
+    if truncated {
+        embed = embed.field(
+            "Tip",
+            format!("Showing first {MULTI_RESULTS_LIMIT} results. Add more words to narrow it down."),
+            false,
+        );
+    }
+
+    let builder = CreateMessage::new().embed(embed);
+    let _ = msg.channel_id.send_message(&ctx.http, builder).await;
+}
+
+async fn send_card_embed(
+    ctx: &Context,
+    msg: &Message,
+    pool: &SqlitePool,
+    card: db::StoredCard,
+    emoji_map: &HashMap<String, String>,
+) {
+    let embed = build_card_embed(&card, emoji_map);
+    let builder = build_card_message_with_images(pool, &card, embed).await;
+
+    if let Err(why) = msg.channel_id.send_message(&ctx.http, builder).await {
+        println!("Error sending message: {why:?}");
+    }
+}
+
+async fn send_card_image(
+    ctx: &Context,
+    msg: &Message,
+    pool: &SqlitePool,
+    card: db::StoredCard,
+) {
+    let builder = build_card_image_message(pool, &card).await;
+
+    if let Err(why) = msg.channel_id.send_message(&ctx.http, builder).await {
+        println!("Error sending message: {why:?}");
+    }
+}
+
+fn build_card_embed(card: &db::StoredCard, emoji_map: &HashMap<String, String>) -> CreateEmbed {
+    let mut embed = CreateEmbed::new()
+        .colour(0xe5b61b)
+        .title(card.name.clone())
+        .timestamp(Timestamp::now());
+
+    if let Some(value) = card.cost {
+        embed = embed.field("Cost", value.to_string(), true);
+    }
+    if let Some(value) = card.card_type.as_deref().filter(|v| !v.trim().is_empty()) {
+        embed = embed.field("Card Type", value, true);
+    }
+    if let Some(value) = card.landscape.as_deref().filter(|v| !v.trim().is_empty()) {
+        let value = if let Some(emoji_name) = emoji::landscape_emoji_name(value) {
+            format!("{} {value}", emoji::emoji_tag(emoji_name, emoji_map))
+        } else {
+            value.to_string()
+        };
+        embed = embed.field("Landscape", value, true);
+    }
+    if let Some(value) = card.ability.as_deref().filter(|v| !v.trim().is_empty()) {
+        let value = emoji::expand_custom_emojis(value, emoji_map);
+        embed = embed.field("Ability", value, false);
+    }
+    if let Some(value) = card.card_set.as_deref().filter(|v| !v.trim().is_empty()) {
+        embed = embed.field("Set", value, true);
+    }
+    if let Some(value) = card.attack {
+        embed = embed.field("Attack", value.to_string(), true);
+    }
+    if let Some(value) = card.defense {
+        embed = embed.field("Defense", value.to_string(), true);
+    }
+
+    let footer = CreateEmbedFooter::new(format!("Card ID: {}", card.id));
+    embed.footer(footer)
+}
+
+async fn build_card_message_with_images(
+    pool: &SqlitePool,
+    card: &db::StoredCard,
+    embed: CreateEmbed,
+) -> CreateMessage {
+    let mut builder = CreateMessage::new();
+    let image_paths = collect_card_image_paths(pool, card).await;
+
+    if image_paths.is_empty() {
+        return builder.embed(embed);
+    }
+
+    let mut embed = embed;
+    let mut sent_any_image = false;
+
+    for (index, image_path) in image_paths.into_iter().enumerate() {
+        let resolved_path = resolve_card_image_path(&image_path);
+        let fallback_name = format!("card_{}_{}.jpg", card.id, index + 1);
+        let file_name = Path::new(&resolved_path)
+            .file_name()
+            .and_then(|v| v.to_str())
+            .unwrap_or(&fallback_name)
+            .to_string();
+
+        if let Ok(attachment) = CreateAttachment::path(&resolved_path).await {
+            builder = builder.add_file(attachment);
+
+            if !sent_any_image {
+                embed = embed.image(format!("attachment://{file_name}"));
+                builder = builder.embed(embed.clone());
+                sent_any_image = true;
+            } else {
+                let mut extra_embed = CreateEmbed::new()
+                    .colour(0xe5b61b)
+                    .image(format!("attachment://{file_name}"));
+
+                if index == 1 {
+                    extra_embed = extra_embed.title("Alternative Card Art");
+                }
+
+                builder = builder.add_embed(extra_embed);
+            }
+        }
+    }
+
+    if !sent_any_image {
+        builder = builder.embed(embed);
+    }
+
+    builder
+}
+
+async fn build_card_image_message(pool: &SqlitePool, card: &db::StoredCard) -> CreateMessage {
+    let mut builder = CreateMessage::new();
+
+    let image_paths = collect_card_image_paths(pool, card).await;
+
+    if image_paths.is_empty() {
+        return builder;
+    }
+
+    for image_path in image_paths {
+        let resolved_path = resolve_card_image_path(&image_path);
+        if let Ok(attachment) = CreateAttachment::path(&resolved_path).await {
+            builder = builder.add_file(attachment);
+        }
+    }
+
+    builder
+}
+
+async fn collect_card_image_paths(pool: &SqlitePool, card: &db::StoredCard) -> Vec<String> {
+    let mut image_paths = match db::list_card_image_paths(pool, card.id).await {
+        Ok(paths) => paths,
+        Err(why) => {
+            println!("DB image read error: {why:?}");
+            Vec::new()
+        }
+    };
+
+    if image_paths.is_empty() {
+        if let Some(legacy_path) = card.image_path.as_deref().filter(|v| !v.trim().is_empty()) {
+            image_paths.push(legacy_path.to_string());
+        }
+    }
+
+    image_paths
+}
+
+fn parse_query(raw_query: &str) -> (bool, &str) {
+    let trimmed = raw_query.trim_start();
+    if let Some(rest) = trimmed.strip_prefix("-img") {
+        return (true, rest.trim_start());
+    }
+
+    (false, trimmed)
+}
+
+fn resolve_card_image_path(image_path: &str) -> String {
+    if Path::new(image_path).is_absolute() || image_path.contains('/') || image_path.contains('\\') {
+        image_path.to_string()
+    } else {
+        project_root()
+            .join("assets")
+            .join("cards")
+            .join(image_path)
+            .to_string_lossy()
+            .into_owned()
+    }
+}
