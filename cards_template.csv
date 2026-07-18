@@ -104,7 +104,7 @@ Cow;Creature;Rainbow;;Princess Bubblegum Vs Lumpy Space Princess;cow.jpg;0;1;5
 Cutie;Creature;NiceLands;FLOOP >>> You heal 1 hit point. (Can't go over 25.);Princess Bubblegum Vs Lumpy Space Princess;cutie.jpg;1;0;6
 Dogboy;Creature;Rainbow;Discard a card >>> Dogboy has +2 ATK this turn. (Limit: Once per turn.);Princess Bubblegum Vs Lumpy Space Princess;dogboy.jpg;0;0;5
 Dragon Foot;Creature;Useless Swamp;Discard a card >>> Dragon Foot has +1 ATK this turn. (Limit: Five times per turn.);Princess Bubblegum Vs Lumpy Space Princess;dragon_foot.jpg;1;1;5
-Fairy Shepard;Creature;NiceLands;Each adjacent NiceLands Creature has +2 DEF.;Princess Bubblegum Vs Lumpy Space Princess;fairy_shepard.jpg;2;2;9
+Fairy Shepherd;Creature;NiceLands;Each adjacent NiceLands Creature has +2 DEF.;Princess Bubblegum Vs Lumpy Space Princess;fairy_shepard.jpg;2;2;9
 Fatapillar;Creature;Useless Swamp;+2 ATK for every 5 cards in your discard pile.;Princess Bubblegum Vs Lumpy Space Princess;fatapillar.jpg;2;0;3
 Future Scholar;Creature;Blue Plains;If Future Scholar replaces a Creature, gain 1 action.;Princess Bubblegum Vs Lumpy Space Princess;future_scholar.jpg;2;2;8
 Goat;Creature;Rainbow;If Goat replaces a Creature, draw a card.;Princess Bubblegum Vs Lumpy Space Princess;goat.jpg;0;1;4
