@@ -132,7 +132,7 @@ Piestorm;Spell;NiceLands;Each of your Creatures with no damage has +2 ATK this t
 Ring of Fluffy;Spell;NiceLands;Target Creature you control has +X ATK this turn, where X is the amount of damage on it.;Princess Bubblegum Vs Lumpy Space Princess;ring_of_fluffy.jpg;2;;
 Strength Crystal;Spell;Blue Plains;Target player draws 5 cards.;Princess Bubblegum Vs Lumpy Space Princess;strength_crystal.jpg;2;;
 Subliminal Strength;Spell;Blue Plains;Target Creature you control has +2 ATK for each Spell you played this turn (including this one).;Princess Bubblegum Vs Lumpy Space Princess;subliminal_strength.jpg;1;;
-Toilet of Doom;Spell;Useless Swamp;Target Creature you control has +1 ATK this turn for every 5 cards in your discard pile.;Princess Bubblegum Vs Lumpy Space Princess;toilet_of_doom.jpg;1;;
+Toilet of Doom LSP;Spell;Useless Swamp;Target Creature you control has +1 ATK this turn for every 5 cards in your discard pile.;Princess Bubblegum Vs Lumpy Space Princess;toilet_of_doom_lsp.jpg;1;;
 Volcano;Spell;Rainbow;Destroy target Building. You may deal 3 damage to a Creature in that Lane. Flip your Landscape in that Lane face down.;Princess Bubblegum Vs Lumpy Space Princess;volcano.jpg;1;;
 Cave of Solitude;Building;NiceLands;Discard a card >>> Your Creature in this Lane cannot be targeted or attacked until the start of your next turn.;Princess Bubblegum Vs Lumpy Space Princess;cave_of_solitude.jpg;2;;
 Mausoleum;Building;Useless Swamp;Your Creature in this Lane has +1 DEF for every 5 cards in your discard pile.;Princess Bubblegum Vs Lumpy Space Princess;mausoleum.jpg;1;;
@@ -831,3 +831,4 @@ King Pizza Time;Spell;Cornfield;Deal 1 damage to your opponent for each card in 
 JeffPattonMagic;Building;NiceLands;FLOOP and destroy your Creature in this Lane >>> Play the top 2 cards of your deck for free. ;Tournament Winner Card Art;jeffpattonmagic.jpg|jeffpattonmagic2.jpg;2;;
 PichuisPro;Building;Rainbow;The opposing Creature in this Lane has -2 DEF. ;Tournament Winner Card Art;pichuispro.jpg|pichuispro2.jpg;1;;
 NotAThotScott;Creature;Useless Swamp;When TailGator enters play, draw a card for each Creature placed into your discard pile this turn. ;Tournament Winner Card Art;notathotscott.jpg|notathotscott2.jpg;1;2;6
+Toilet of Doom FTG;Spell;Useless Swamp;Deal 1 damage to target Creature for every 5 cards in your discard pile.;For The Glory;toilet_of_doom_ftg.jpg;1;;
