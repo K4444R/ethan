@@ -4,6 +4,7 @@ use csv::ReaderBuilder;
 use sqlx::sqlite::{SqliteConnectOptions, SqlitePoolOptions};
 use sqlx::Row;
 use sqlx::SqlitePool;
+use log::info;
 
 pub struct Card<'a> {
     pub name: &'a str,
@@ -37,6 +38,7 @@ pub async fn connect_and_init(db_path: &str) -> Result<SqlitePool, sqlx::Error> 
     let pool = SqlitePoolOptions::new().max_connections(5).connect_with(options).await?;
 
     init_schema(&pool).await?;
+    info!("Database was initialized.");
     Ok(pool)
 }
 
@@ -299,6 +301,7 @@ pub async fn count_cards(pool: &SqlitePool) -> Result<i64, sqlx::Error> {
 }
 
 pub async fn import_cards_from_csv(pool: &SqlitePool, csv_path: &str) -> Result<usize, String> {
+    info!("CSV import started: path={csv_path}");
     let mut reader = ReaderBuilder::new()
         .delimiter(b';')
         .has_headers(true)
@@ -337,6 +340,7 @@ pub async fn import_cards_from_csv(pool: &SqlitePool, csv_path: &str) -> Result<
         inserted += 1;
     }
 
+    info!("CSV import finished: path={csv_path} inserted={inserted}");
     Ok(inserted)
 }
 
@@ -364,7 +368,8 @@ pub async fn list_card_image_paths(pool: &SqlitePool, card_id: i64) -> Result<Ve
 }
 
 pub async fn find_card_by_name(pool: &SqlitePool, name: &str) -> Result<Option<StoredCard>, sqlx::Error> {
-    sqlx::query_as::<_, StoredCard>(
+    info!("Exact card lookup in DB started: query='{}'", name);
+    let result = sqlx::query_as::<_, StoredCard>(
         r#"
         SELECT id, name, card_type, landscape, ability, card_set, image_path, cost, attack, defense
         FROM cards
@@ -375,7 +380,10 @@ pub async fn find_card_by_name(pool: &SqlitePool, name: &str) -> Result<Option<S
     )
     .bind(name)
     .fetch_optional(pool)
-    .await
+    .await?;
+
+    info!("Exact card lookup in DB finished: query='{}' found={}", name, result.is_some());
+    Ok(result)
 }
 
 pub async fn search_cards_by_partial_name(
@@ -383,7 +391,8 @@ pub async fn search_cards_by_partial_name(
     query: &str,
     limit: i64,
 ) -> Result<Vec<StoredCard>, sqlx::Error> {
-    sqlx::query_as::<_, StoredCard>(
+    info!("Partial card lookup in DB started: query='{}' limit={}", query, limit);
+    let result = sqlx::query_as::<_, StoredCard>(
         r#"
         SELECT id, name, card_type, landscape, ability, card_set, image_path, cost, attack, defense
         FROM cards
@@ -399,7 +408,10 @@ pub async fn search_cards_by_partial_name(
     .bind(query)
     .bind(limit)
     .fetch_all(pool)
-    .await
+    .await?;
+
+    info!("Partial card lookup in DB finished: query='{}' count={}", query, result.len());
+    Ok(result)
 }
 
 fn non_empty(value: Option<&str>) -> Option<&str> {
