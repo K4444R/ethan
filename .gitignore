@@ -3,3 +3,4 @@
 *.db
 /scripts
 /logs
+/.vscode

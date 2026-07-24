@@ -139,7 +139,7 @@ Mausoleum;Building;Useless Swamp;Your Creature in this Lane has +1 DEF for every
 Night Tower;Building;Useless Swamp;FLOOP >>> If your opponent has no Creatures in this Lane, they discard a card.;Princess Bubblegum Vs Lumpy Space Princess;night_tower.jpg;1;;
 Pyramidia;Building;Blue Plains;FLOOP >>> Pay 1 less action to replace your Creature in this Lane.;Princess Bubblegum Vs Lumpy Space Princess;pyramidia.jpg;1;;
 Windmill of Health;Building;NiceLands;While your Creature in this Lane has no damage on it, it has +2 ATK.;Princess Bubblegum Vs Lumpy Space Princess;windmill_of_health.jpg;1;;
-Ice King;Hero;;The first time one of your Creatures attacks your opponent during your, it has +1 ATK.;Ice King Vs Marceline;ice_king.jpg;;;
+Ice King;Hero;;The first time one of your Creatures attacks your opponent during your turn, it has +1 ATK.;Ice King Vs Marceline;ice_king.jpg;;;
 Marceline;Hero;;Your Creatures with 5 or more damage on them have +1 ATK.;Ice King Vs Marceline;marceline.jpg;;;
 Abdominal Snowman;Creature;IcyLands;+3 ATK while your opponent does not control a Creature in this Lane.;Ice King Vs Marceline;abdominal_snowman.jpg;1;3;2
 Ban-She Princess;Creature;Useless Swamp;When Ban-She Princess enters play, you may remove a token from an adjacent Landscape.;Ice King Vs Marceline;ban-she_princess.jpg;1;2;7
@@ -275,7 +275,7 @@ Popcorn Butteredfly;Creature;Cornfield;FLOOP >>> Draw a card for each Building y
 Druid of the Cob;Creature;Cornfield;Flooped Creatures you control have +1 ATK.;Fionna Vs Cake;druid_of_the_cob.jpg;1;1;8
 Pony;Creature;Rainbow;;Fionna Vs Cake;pony.jpg;0;1;5
 Friendship Bracelet;Spell;Rainbow;Swap any amount of damage between two of your Creatures.;Fionna Vs Cake;friendship_bracelet.jpg;0;;
-Singing Sword;Spell;Rainbow;Target Creature has +1 ATK this turn for every 2 cards you have drawn this turn.;Fionna Vs Cake;singing_sword.jpg;0;;
+Singing Sword;Spell;Rainbow;Target Creature has +1 ATK for every 2 cards you have drawn this turn.;Fionna Vs Cake;singing_sword.jpg;0;;
 Sword Bouquet;Spell;Rainbow;Deal 1 damage to target Creature for every card you have drawn this turn.;Fionna Vs Cake;sword_bouquet.jpg;1;;
 Glorious Gramophone;Spell;Blue Plains;Draw 4 cards, then discard any 2 cards.;Fionna Vs Cake;glorious_gramophone.jpg;1;;
 River of Swords;Spell;Rainbow;Each of your Creatures has +2 ATK this turn. Draw 2 cards.;Fionna Vs Cake;river_of_swords.jpg;2;;
