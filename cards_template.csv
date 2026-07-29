@@ -1,4 +1,4 @@
-Name;Card Type;Landscape;Ability;Set;Image Path;Cost;Attack;Defense
+﻿Name;Card Type;Landscape;Ability;Set;Image Path;Cost;Attack;Defense
 Finn;Hero;;"Creatures you control with no damage on them have ""FLOOP >>> Deal 1 damage to target Creature.""";Finn Vs Jake;finn.jpg;;;
 Jake;Hero;;Creatures on facedown Landscapes you control have +2 ATK.;Finn Vs Jake;jake.jpg;;;
 Ancient Scholar;Creature;Blue Plains;FLOOP >>> Return a random Rainbow card from your discard pile to your hand. If you control a Building in this Lane, gain 1 action.;Finn Vs Jake;ancient_scholar.jpg;1;1;7
@@ -830,5 +830,7 @@ The Card Dweeb;Hero;;At the beginning of your turn go to carddweeb.com/Random. Y
 King Pizza Time;Spell;Cornfield;Deal 1 damage to your opponent for each card in their hand. ;Tournament Winner Card Art;kingpizzatime.jpg|kingpizzatime2.jpg;1;;
 JeffPattonMagic;Building;NiceLands;FLOOP and destroy your Creature in this Lane >>> Play the top 2 cards of your deck for free. ;Tournament Winner Card Art;jeffpattonmagic.jpg|jeffpattonmagic2.jpg;2;;
 PichuisPro;Building;Rainbow;The opposing Creature in this Lane has -2 DEF. ;Tournament Winner Card Art;pichuispro.jpg|pichuispro2.jpg;1;;
-NotAThotScott;Creature;Useless Swamp;When TailGator enters play, draw a card for each Creature placed into your discard pile this turn. ;Tournament Winner Card Art;notathotscott.jpg|notathotscott2.jpg;1;2;6
+NotAThotScott TailGator;Creature;Useless Swamp;When TailGator enters play, draw a card for each Creature placed into your discard pile this turn. ;Tournament Winner Card Art;notathotscott.jpg|notathotscott2.jpg;1;2;6
 Toilet of Doom FTG;Spell;Useless Swamp;Deal 1 damage to target Creature for every 5 cards in your discard pile.;For The Glory;toilet_of_doom_ftg.jpg;1;;
+NotAThotScott Billy;Hero;;If your opponent's deck runs out of cards, you win the game.;Tournament Winner Card Art;notathotscott_billy.jpg;;;
+Zoë;Creature;Rainbow;Prismatarchia costs 1 less to play for each Creature of a different Landscape type you control.;Custom Alternative Art;zoe.jpg;4;4;11
