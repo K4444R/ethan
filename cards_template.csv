@@ -834,3 +834,7 @@ NotAThotScott TailGator;Creature;Useless Swamp;When TailGator enters play, draw 
 Toilet of Doom FTG;Spell;Useless Swamp;Deal 1 damage to target Creature for every 5 cards in your discard pile.;For The Glory;toilet_of_doom_ftg.jpg;1;;
 NotAThotScott Billy;Hero;;If your opponent's deck runs out of cards, you win the game.;Tournament Winner Card Art;notathotscott_billy.jpg;;;
 Zoë;Creature;Rainbow;Prismatarchia costs 1 less to play for each Creature of a different Landscape type you control.;Custom Alternative Art;zoe.jpg;4;4;11
+Starchy;Hero;;Once per turn, you may remove target Creature in a discard pile from the game and draw a card.;Promo;starchy.jpg;;;
+Sweet Delicious Meats;Spell;Useless Swamp;Target player heals 1 HP for each card that is removed from the game.;Promo;sweet_delicious_meats.jpg;1;;
+Probably Too Many Unicorns;Creature;Useless Swamp;When this Creature enters play, reveal the bottom 4 cards of target player's deck. Put all Creatures revealed into their discard pile and the rest on top of their deck in any order. If this Creature is defeated, put it on the bottom of your deck. ;Promo;probably_too_many_unicorns.jpg;1;1;9
+Time Drake;Creature;Useless Swamp;When Time Drake enters play, reveal the top 5 cards of target player's deck. Put all Creatures revealed into their discard pile and return the rest to the top of their deck in any order. Add an :attack_token: to Time Drake for each Creature put into a discard pile this way.;Promo;time_drake.jpg;2;0;8
