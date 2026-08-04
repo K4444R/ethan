@@ -106,8 +106,18 @@ impl EventHandler for Handler {
                         .await;
                     }
                     Ok(cards) => {
-                        info!("Partial search returned {} match(es) for query='{}'", cards.len(), card_name);
-                        send_multi_result_embed(&ctx, &msg, card_name, cards).await;
+                        if cards.len() == 1 {
+                            let card = cards.into_iter().next().unwrap();
+                            info!("Partial search returned single match; sending card='{}' for query='{}'", card.name, card_name);
+                            if use_image_response {
+                                send_card_image(&ctx, &msg, &self.pool, card).await;
+                            } else {
+                                send_card_embed(&ctx, &msg, &self.pool, card, &self.emoji_map).await;
+                            }
+                        } else {
+                            info!("Partial search returned {} match(es) for query='{}'", cards.len(), card_name);
+                            send_multi_result_embed(&ctx, &msg, card_name, cards).await;
+                        }
                     }
                     Err(why) => {
                         error!(
@@ -192,13 +202,10 @@ async fn send_status_embed(
 
 async fn send_multi_result_embed(ctx: &Context, msg: &Message, card_name: &str, cards: Vec<db::StoredCard>) {
     let truncated = cards.len() > MULTI_RESULTS_LIMIT;
-    let visible_count = cards.len().min(MULTI_RESULTS_LIMIT);
     let listed = cards.into_iter().take(MULTI_RESULTS_LIMIT);
-    let has_single = visible_count == 1;
-
     let mut embed = CreateEmbed::new()
         .colour(0xe5b61b)
-        .title(if has_single { "Possible Match" } else { "Multiple Results" })
+        .title("Multiple Results")
         .description(format!("Found similar cards for `{card_name}`. Please type the full card name:"))
         .timestamp(Timestamp::now());
 
