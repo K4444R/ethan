@@ -1,4 +1,4 @@
-﻿Name;Card Type;Landscape;Ability;Set;Image Path;Cost;Attack;Defense
+Name;Card Type;Landscape;Ability;Set;Image Path;Cost;Attack;Defense
 Finn;Hero;;"Creatures you control with no damage on them have ""FLOOP >>> Deal 1 damage to target Creature.""";Finn Vs Jake;finn.jpg;;;
 Jake;Hero;;Creatures on facedown Landscapes you control have +2 ATK.;Finn Vs Jake;jake.jpg;;;
 Ancient Scholar;Creature;Blue Plains;FLOOP >>> Return a random Rainbow card from your discard pile to your hand. If you control a Building in this Lane, gain 1 action.;Finn Vs Jake;ancient_scholar.jpg;1;1;7
@@ -24,7 +24,7 @@ Patchy the Pumpkin;Creature;Cornfield;FLOOP >>> Deal 1 damage to target Creature
 Phyllis;Creature;Rainbow;;Finn Vs Jake;phyllis.jpg;1;2;7
 Psionic Architect;Creature;Blue Plains;When Psionic Architect enters play, you may ready one of your Flooped Creatures.;Finn Vs Jake;psionic_architect.jpg;1;2;6
 Punk Cat;Creature;Blue Plains;Each Creature that changed Lanes this turn has +2 ATK.;Finn Vs Jake;punk_cat.jpg;1;2;6
-Struzann Djinn;Creature;Blue Plains;+2 ATK for each of your Flooped Creatures.;Finn Vs Jake;struzann_jinn.jpg;2;1;11
+Struzann Djinn;Creature;Blue Plains;+2 ATK for each of your Flooped Creatures.;Finn Vs Jake;struzann_djinn.jpg;2;1;11
 The Pig;Creature;Rainbow;FLOOP >>> Flip target Cornfield Landscape in this Lane face down.;Finn Vs Jake;the_pig.jpg;1;1;4
 Travelin' Farmer;Creature;Cornfield;When Travelin' Farmer leaves play, deal 1 damage to your opponent for each card in their hand.;Finn Vs Jake;travelin'_farmer.jpg;2;2;12
 Uni-Knight;Creature;Blue Plains;Pay 1 action >>> Target Creature in this Lane has -10 ATK this turn.;Finn Vs Jake;uni-knight.jpg;1;3;4
