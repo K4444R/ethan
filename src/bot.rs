@@ -25,6 +25,15 @@ const MIN_PARTIAL_QUERY_ALNUM_LEN: usize = 3;
 #[async_trait]
 impl EventHandler for Handler {
     async fn message(&self, ctx: Context, msg: Message) {
+        if msg.content.trim().eq_ignore_ascii_case("!faq") {
+            info!("FAQ request from user={} channel={}", msg.author.id, msg.channel_id);
+            if let Ok(ethan_reaction) = ReactionType::try_from(emoji::emoji_tag("ethan_allfire", &self.emoji_map)) {
+                let _ = msg.react(&ctx.http, ethan_reaction).await;
+            }
+            send_faq_message(&ctx, &msg, &self.emoji_map).await;
+            return;
+        }
+
         let Some(raw_query) = msg.content.strip_prefix("!ethan") else {
             return;
         };
@@ -179,6 +188,42 @@ async fn send_intro_message(ctx: &Context, msg: &Message, emoji_map: &HashMap<St
     let builder = CreateMessage::new().embed(embed);
     if let Err(why) = msg.channel_id.send_message(&ctx.http, builder).await {
         error!("Failed to send intro message to channel={}: {why:?}", msg.channel_id);
+    }
+}
+
+const KICKSTARTER_FAQ_URL: &str = "https://www.kickstarter.com/projects/cze/adventure-time-card-wars-2026/faqs";
+const KICKSTARTER_URL: &str = "https://www.kickstarter.com/projects/cze/adventure-time-card-wars-2026/";
+
+async fn send_faq_message(ctx: &Context, msg: &Message, emoji_map: &HashMap<String, String>) {
+    let ethan_emoji = emoji::emoji_tag("ethan_allfire", emoji_map);
+    let embed = CreateEmbed::new()
+        .colour(0xe5b61b)
+        .title("Kickstarter 3 is LIVE!")
+        .url(KICKSTARTER_URL)
+        .description(format!(
+            "Hey, Ethan is here! {ethan_emoji} The flames are HOT today, because **Adventure Time Card Wars Kickstarter 3** has officially launched!\n\n\
+            Got questions about pledges, shipping, add-ons, VAT or the mystery \"?\" coin? \n
+            I already burned through them all, and every answer is waiting for you in the campaign FAQ:\n\n\
+            > **[Read the Kickstarter FAQ]({KICKSTARTER_FAQ_URL})**\n\n\
+            Now go back it, Floop The Pig and get ready for The Dark Pig!"
+        ))
+        .footer(CreateEmbedFooter::new("Card Wars 2026 • Kickstarter 3"))
+        .timestamp(Timestamp::now());
+    let mut builder = CreateMessage::new();
+    let banner_path = project_root().join("assets").join("kickstarter_3.jpg");
+    match CreateAttachment::path(&banner_path).await {
+        Ok(attachment) => {
+            builder = builder
+                .add_file(attachment)
+                .embed(embed.image("attachment://kickstarter_3.jpg"));
+        }
+        Err(why) => {
+            warn!("FAQ banner missing at {}: {why:?}", banner_path.display());
+            builder = builder.embed(embed);
+        }
+    }
+    if let Err(why) = msg.channel_id.send_message(&ctx.http, builder).await {
+        error!("Failed to send FAQ message to channel={}: {why:?}", msg.channel_id);
     }
 }
 
