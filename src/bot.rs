@@ -202,7 +202,7 @@ async fn send_faq_message(ctx: &Context, msg: &Message, emoji_map: &HashMap<Stri
         .url(KICKSTARTER_URL)
         .description(format!(
             "Hey, Ethan is here! {ethan_emoji} The flames are HOT today, because **Adventure Time Card Wars Kickstarter 3** has officially launched!\n\n\
-            Got questions about pledges, shipping, add-ons, VAT or the mystery \"?\" coin? \n
+            Got questions about pledges, shipping, add-ons, VAT or the mystery \"?\" coin? \n\n\
             I already burned through them all, and every answer is waiting for you in the campaign FAQ:\n\n\
             > **[Read the Kickstarter FAQ]({KICKSTARTER_FAQ_URL})**\n\n\
             Now go back it, Floop The Pig and get ready for The Dark Pig!"
