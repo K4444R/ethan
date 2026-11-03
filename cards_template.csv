@@ -919,3 +919,8 @@ Lava Pig;Creature;Rainbow;FLOOP >>> Flip target LavaFlats Landscape in this Lane
 Dawn Coyote;Creature;LavaFlats;When Dawn Coyote enters play, destroy all opposing Buildings. Burning Creatures you control with 3 or more burn tokens on them target your opponent target your opponent instead of opposing Creatures in their Lane. ;GOLB Vs Banana Guard;dawn_coyote.jpg;2;2;6
 Glacerius;Creature;IcyLands;Glacerius costs 1 less to play for each frozen Landscape controlled by 2 target players. At the end of your turn, lose 5 HP or HP equal to the number of frozen Landscapes, whichever is greater.;Kickstarter #3;glacerius.jpg;9;8;5
 Fishin' Hole;Building;IcyLands;FLOOP >>> Reveal cards from the top of your deck until you reveal a Creature. Shuffle the other revealed cards back into the deck and then put the Creature on top.;KIckstarter #3;fishin'_hole.jpg;1;;
+Vampire King;Hero;;When you would heal damage from a Creature, you may instead deal that much damage to any Creature. ;Kickstarter #3;vampire_king.jpg;;;
+Football;Hero;;For each card you draw on your turn after the first, you may heal 1 damage from target Creature. ;Promo;football.jpg;;;
+Speed Read;Spell;NiceLands;Draw 2 cards and then discard 2 cards. If you discarded a Blue Plains Spell, you may repeat this effect once. ;Promo;speed_read.jpg;1;;
+Teenage Scholar;Creature;NiceLands;FLOOP >>> Draw a card for every 3 damage on Teenage Scholar.;Promo;teenage_scholar.jpg;2;1;11
+Home School;Building;NiceLands;At the start of your turn, if you control a Creature in this Lane with 3 or more damage on it, draw a card. ;Promo;home_school.jpg;1;;
