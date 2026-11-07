@@ -959,3 +959,4 @@ Corporate Ladder;Building;IcyLands;Lose 5 HP >>> Gain an action. (Limit: Once pe
 Sir Loin;Creature;NiceLands;Each time you heal HP on your turn, deal 1 damage to any target. Each time you lose HP on your turn, you may move 1 non-damage token from any target onto Sir Loin.;Adult Finn Vs Hunson Abadeer;sir_loin.jpg;2;4;8
 Bella Noche;Hero;;Your deck may not contain Spells. Your opponent may only play 1 Spell each turn.;Kickstarter #3;bella_noche.jpg;;;
 War Pig;Creature;Rainbow;???;Kickstarter #3;war_pig.jpg;1;1;4
+Orderly Hopkins;Creature;NiceLands;When an opponent casts their first Spell each turn, put an :attack_token: on Orderly Hopkins.;Kickstarter #3;orderly_hopkins.jpg;1;1;7
