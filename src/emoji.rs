@@ -32,17 +32,6 @@ pub fn load_emoji_map() -> HashMap<String, String> {
         }
     }
 
-    for (key, value) in env::vars() {
-        let key = normalize_emoji_name(&key);
-        if key.is_empty() || map.contains_key(&key) {
-            continue;
-        }
-
-        if let Some(id) = parse_emoji_id(&value) {
-            map.insert(key, id);
-        }
-    }
-
     map
 }
 
@@ -75,8 +64,8 @@ pub fn expand_custom_emojis(input: &str, emoji_map: &HashMap<String, String>) ->
 
         if !name.is_empty() && name.chars().all(|c| c.is_ascii_alphanumeric() || c == '_') {
             let normalized_name = normalize_emoji_name(name);
-            if let Some(id) = emoji_map.get(&normalized_name) {
-                output.push_str(&format!("<:{normalized_name}:{id}>"));
+            if emoji_map.contains_key(&normalized_name) {
+                output.push_str(&emoji_tag(&normalized_name, emoji_map));
             } else {
                 output.push(':');
                 output.push_str(name);
@@ -106,7 +95,7 @@ pub fn landscape_emoji_name(landscape: &str) -> Option<&'static str> {
         .trim()
         .to_ascii_lowercase()
         .chars()
-        .filter(|c| c.is_ascii_alphanumeric())
+        .filter(char::is_ascii_alphanumeric)
         .collect::<String>();
 
     match key.as_str() {
@@ -124,7 +113,11 @@ pub fn landscape_emoji_name(landscape: &str) -> Option<&'static str> {
 
 fn normalize_emoji_name(name: &str) -> String {
     let normalized = name.trim().to_ascii_lowercase();
-    if normalized.is_empty() || !normalized.chars().all(|c| c.is_ascii_alphanumeric() || c == '_') {
+    if normalized.is_empty()
+        || !normalized
+            .chars()
+            .all(|c| c.is_ascii_alphanumeric() || c == '_')
+    {
         return String::new();
     }
 
@@ -172,4 +165,26 @@ fn parse_emoji_tag(raw: &str) -> Option<(String, String)> {
     }
 
     Some((name.to_string(), id.to_string()))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn expand_custom_emojis_replaces_only_known_names() {
+        let map = HashMap::from([("attack_token".to_string(), "123".to_string())]);
+        for (input, expected) in [
+            (
+                ":attack_token: deal 1: ok",
+                "<:attack_token:123> deal 1: ok",
+            ),
+            (":ATTACK_TOKEN:", "<:attack_token:123>"),
+            (":unknown: x", ":unknown: x"),
+            ("no emoji", "no emoji"),
+            ("::", "::"),
+        ] {
+            assert_eq!(expand_custom_emojis(input, &map), expected);
+        }
+    }
 }
