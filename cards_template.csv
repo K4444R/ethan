@@ -960,3 +960,4 @@ Sir Loin;Creature;NiceLands;Each time you heal HP on your turn, deal 1 damage to
 Bella Noche;Hero;;Your deck may not contain Spells. Your opponent may only play 1 Spell each turn.;Kickstarter #3;bella_noche.jpg;;;
 War Pig;Creature;Rainbow;???;Kickstarter #3;war_pig.jpg;1;1;4
 Orderly Hopkins;Creature;NiceLands;When an opponent casts their first Spell each turn, put an :attack_token: on Orderly Hopkins.;Kickstarter #3;orderly_hopkins.jpg;1;1;7
+Treated Patient;Creature;NiceLands;The first time Treated Patient is dealt damage each turn, you heal that much HP. ;Kickstarter #3;treated_patient.jpg;1;0;10
