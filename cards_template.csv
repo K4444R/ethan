@@ -961,3 +961,12 @@ Bella Noche;Hero;;Your deck may not contain Spells. Your opponent may only play 
 War Pig;Creature;Rainbow;???;Kickstarter #3;war_pig.jpg;1;1;4
 Orderly Hopkins;Creature;NiceLands;When an opponent casts their first Spell each turn, put an :attack_token: on Orderly Hopkins.;Kickstarter #3;orderly_hopkins.jpg;1;1;7
 Treated Patient;Creature;NiceLands;The first time Treated Patient is dealt damage each turn, you heal that much HP. ;Kickstarter #3;treated_patient.jpg;1;0;10
+I, Ron;Creature;LavaFlats;Burning Creatures you control have +1 ATK for each other burning Creature you control.;GOLB Vs Banana Guard;i,_ron.jpg;1;2;7
+Skate Park;Building;IcyLands;The first time time you flip a coin on your turn, heal 2 damage from target Creature.;GOLB Vs Banana Guard;skate_park.jpg;1;;
+Clamera Man;Creature;IcyLands;Friendly players may play Creatures on frozen Landscapes. Each turn, the first time you flip a coin and the result is tails, freeze all Landscapes in target Lane.;GOLB Vs Banana Guard;clamera_man.jpg;1;1;5
+Janitor King;Creature;Rainbow;When Janitor King enters play, vote to see who heals all damage from their Creatures. If you win, also double the damage on all opposing Creatures.;GOLB Vs Banana Guard;janitor_king.jpg;2;3;6
+Drop In;Spell;IcyLands;The next time you would flip a coin this turn, you may lose 2 HP to choose to flip it again. You may take the second result instead. If it is the same result, freeze a Landscape. Each flip and result count for card effects.) ;GOLB Vs Banana Guard;drop_in.jpg;0;;
+Ba-Donk!;Spell;LavaFlats;Remove all burn tokens in play and flip an equal number of coins. For each heads, deal 1 damage to all opposing Creatures and players. For each tails, burn target Creature you control. ;GOLB Vs Banana Guard;ba-donk!.jpg;2;;
+The Road Less Traveled ;Building;Rainbow;The first time you flip a coin on your turn, you may guess the result of the toss before you flip. If correct, draw a card. If incorrect, look at the bottom card of your deck. You may put that card on the top of your deck or into your discard pile.;GOLB Vs Banana Guard;the_road_less_traveled.jpg;1;;
+Sanitizing Chamber;Building;NiceLands;After opposing players draw their first card each turn, they reveal the top card of their decks. If it is a Spell, they discard it and repeat this effect. Otherwise, they return the card face down to the top of their deck.;Kickstarter #3;sanitizing_chamber.jpg;2;;
+Useless Pig;Creature;Rainbow;FLOOP >>> Flip target Useless Swamp Landscape in this Lane face down.;Kickstarter #3;useless_pig.jpg;1;1;4
