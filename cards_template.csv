@@ -958,7 +958,7 @@ Stripped of Benefits;Spell;IcyLands;Vote to see who chooses a player to remove a
 Corporate Ladder;Building;IcyLands;Lose 5 HP >>> Gain an action. (Limit: Once per turn.);Adult Finn Vs Hunson Abadeer;corpotate_ladder.jpg;2;;
 Sir Loin;Creature;NiceLands;Each time you heal HP on your turn, deal 1 damage to any target. Each time you lose HP on your turn, you may move 1 non-damage token from any target onto Sir Loin.;Adult Finn Vs Hunson Abadeer;sir_loin.jpg;2;4;8
 Bella Noche;Hero;;Your deck may not contain Spells. Your opponent may only play 1 Spell each turn.;Kickstarter #3;bella_noche.jpg;;;
-War Pig;Creature;Rainbow;???;Kickstarter #3;war_pig.jpg;1;1;4
+War Pig;Creature;Rainbow;"When War Pig attacks, immediately add an :attack_token: to it for each Creature you control with ""Pig"" in its name (including this one). ";Kickstarter #3;war_pig.jpg;1;1;4
 Orderly Hopkins;Creature;NiceLands;When an opponent casts their first Spell each turn, put an :attack_token: on Orderly Hopkins.;Kickstarter #3;orderly_hopkins.jpg;1;1;7
 Treated Patient;Creature;NiceLands;The first time Treated Patient is dealt damage each turn, you heal that much HP. ;Kickstarter #3;treated_patient.jpg;1;0;10
 I, Ron;Creature;LavaFlats;Burning Creatures you control have +1 ATK for each other burning Creature you control.;GOLB Vs Banana Guard;i,_ron.jpg;1;2;7
@@ -970,3 +970,8 @@ Ba-Donk!;Spell;LavaFlats;Remove all burn tokens in play and flip an equal number
 The Road Less Traveled ;Building;Rainbow;The first time you flip a coin on your turn, you may guess the result of the toss before you flip. If correct, draw a card. If incorrect, look at the bottom card of your deck. You may put that card on the top of your deck or into your discard pile.;GOLB Vs Banana Guard;the_road_less_traveled.jpg;1;;
 Sanitizing Chamber;Building;NiceLands;After opposing players draw their first card each turn, they reveal the top card of their decks. If it is a Spell, they discard it and repeat this effect. Otherwise, they return the card face down to the top of their deck.;Kickstarter #3;sanitizing_chamber.jpg;2;;
 Useless Pig;Creature;Rainbow;FLOOP >>> Flip target Useless Swamp Landscape in this Lane face down.;Kickstarter #3;useless_pig.jpg;1;1;4
+Tiffany;Hero;;The first time you would freeze a Landscape each turn, you may instead place the frozen token on an opposing Creature on that Landscape. Frozen Creatures do not ready unless their owner discards a card to remove the token. ;Kickstarter #3;tiffany.jpg;;;
+Wicker Man;Creature;Cornfield;Each time a Creature is destroyed, burn Wicker Man and an opposing Creature.;Doubles Trouble;wicker_man.jpg;2;4;12
+Hiring Freeze;Spell;IcyLands;Remove any number of frozen tokens from target player's Landscapes and gain an action for each removed token. You may only spend these actions to play Creatures from your hand. ;Doubles Trouble;hiring_freeze.jpg;2;;
+Dark Bidding;Spell;Useless Swamp;Starting with you, each player in turn order bids an amount of HP to lose. This conthues until no one wishes to raise the amount. The player who bids the most HP loses that amount, then they destroy all Creatures target player controls.;Doubles Trouble;dark_bidding.jpg;2;;
+The Gift of Cold;Spell;IcyLands;Freeze up to 2 of your opponent's unfrozen Landscapes unless your opponent chooses to lose 4 HP. If they have no unfrozen Landscapes, they must lose 4 HP. If you freeze a Landscape this way, shuffle this card into your deck instead of putting it in your discard. ;Kickstarter #3;the_gift_of_cold.jpg;1;;
