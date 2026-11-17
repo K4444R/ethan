@@ -19,8 +19,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let project_root = project_root();
     let log_dir = project_root.join("logs");
     let log_path = log_dir.join("output.log");
-
-    // logs/ is gitignored, so a fresh clone does not have it.
+    
     fs::create_dir_all(&log_dir)?;
     trim_log_file(&log_path, MAX_LOG_LINES)?;
     setup_logger(&log_path)?;
@@ -62,7 +61,6 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     Ok(())
 }
 
-// Relative to the working directory, so the binary still works after being moved.
 pub(crate) fn project_root() -> PathBuf {
     PathBuf::from(".")
 }

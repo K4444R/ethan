@@ -983,3 +983,5 @@ Color Pie;Spell;NiceLands;Put an :attack_token: on target Creature for each diff
 Potion Explosion;Spell;NiceLands;Put each Spell in your discard pile in time-out. Deal damage to all opposing Creatures equal to the number of Spells put in time-out this way.;GOLB Vs Banana Guard;potion_explosion.jpg;2;;
 Rabble-Rouser Armourdillo;Creature;NiceLands;Whump. At the start of the Fight Phase on each of your turns, put an :attack_token: on each friendly Creature that shares a name with another Creature in play.;GOLB Vs Banana Guard;rabble-rouser_armourdillo.jpg;3;4;10
 Freezer Burn;Spell;IcyLands;Deal 2 damage to each Creature with a non-damage token on it. If a Creature was destroyed this way, shuffle Freezer Burn into your deck instead of putting it into your discard pile. ;Kickstarter #3;freezer_burn.jpg;1;;
+Snowy Cabin;Building;IcyLands;FLOOP >>> You may move a non-damage token from any target and place it on any other target. ;Kickstarter #3;snowy_cabin.jpg;1;;
+Lemonhope;Hero;;Anytime you would shuffle your deck on your turn, you may also shuffle in any 2 cards from your discard pile. ;Kickstarter #3;lemonhope.jpg;;;
