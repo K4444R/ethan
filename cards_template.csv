@@ -985,3 +985,10 @@ Rabble-Rouser Armourdillo;Creature;NiceLands;Whump. At the start of the Fight Ph
 Freezer Burn;Spell;IcyLands;Deal 2 damage to each Creature with a non-damage token on it. If a Creature was destroyed this way, shuffle Freezer Burn into your deck instead of putting it into your discard pile. ;Kickstarter #3;freezer_burn.jpg;1;;
 Snowy Cabin;Building;IcyLands;FLOOP >>> You may move a non-damage token from any target and place it on any other target. ;Kickstarter #3;snowy_cabin.jpg;1;;
 Lemonhope;Hero;;Anytime you would shuffle your deck on your turn, you may also shuffle in any 2 cards from your discard pile. ;Kickstarter #3;lemonhope.jpg;;;
+Criminal Underworld;Spell;Useless Swamp;You may play a card from an opponent's discard pile this turn as a Rainbow card. ;Prince Gumball Vs Marshall Lee;criminal_underworld.jpg;0;;
+Dusty Navigator;Creature;SandyLands;Slippery. FLOOP >>> You may look at the top 4 cards of your deck. Select one card, shuffle the rest into your deck, and put the selected card on top of your deck. ;Kickstarter #3;dusty_navigatior.jpg;1;2;7
+Journey of a Thousand Miles;Spell;SandyLands;Reveal a card from your hand, then reveal cards from the top of your deck until you reveal a card with the same name. Put the revealed card with the same name into your hand, then shuffle the rest back into your deck.;Kickstarter #3;journey_of_a_thousand_miles.jpg;1;;
+Reciprocity;Teamwork;Blue Plains;When you would draw 1 or more cards, you may have your teammate draw that many cards instead.;Doubles Trouble;reciprocity.jpg;2;;
+Respect;Teamwork;LavaFlats;If you and your teammate each control a Creature with the same cost, draw a card at the end of your turns.;Doubles Trouble;respect.jpg;0;;
+Compassion;Teamwork;Rainbow;The first time your team plays a Rainbow Creature each turn, you may put 2 :attack_token: on it.;Doubles Trouble;compassion.jpg;2;;
+End of the Road;Building;SandyLands;Remove End of the Road from the game >>> Shuffle your discard pile into your deck.;Kickstarter #3;end_of_the_road.jpg;0;;
