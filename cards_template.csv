@@ -992,3 +992,10 @@ Reciprocity;Teamwork;Blue Plains;When you would draw 1 or more cards, you may ha
 Respect;Teamwork;LavaFlats;If you and your teammate each control a Creature with the same cost, draw a card at the end of your turns.;Doubles Trouble;respect.jpg;0;;
 Compassion;Teamwork;Rainbow;The first time your team plays a Rainbow Creature each turn, you may put 2 :attack_token: on it.;Doubles Trouble;compassion.jpg;2;;
 End of the Road;Building;SandyLands;Remove End of the Road from the game >>> Shuffle your discard pile into your deck.;Kickstarter #3;end_of_the_road.jpg;0;;
+Mr. Pig;Hero;;???;Kickstarter #3;mr._pig.jpg;;;
+Spirit Hall of Fame;Building;Blue Plains;FLOOP >>> Ready a Flooped Creature in this Lane. It cannot attack this turn.;Adult Finn Vs Hunson Abadeer;spirit_hall_of_fame.jpg;1;;
+Husker Tyrant;Creature;Cornfield;When Husker Tyrant enters play, if it replaced a Creature, remove all :attack_token: from all other Creatures and place them on Husker Tyrant.;Adult Finn Vs Hunson Abadeer;husker_tyrant.jpg;1;0;6
+Flowis, Awakened Volcano;Creature;LavaFlats;Flowis costs 1 less to play for each empty Landscape you control. When Flowis enters play, if you played it from your hand, you may remove any number of non-damage tokens from target Creature or player. For each token removed, burn each opposing Creature.;Adult Finn Vs Hunson Abadeer;flowis,_awakened_volcano.jpg;5;5;3
+Retained Council;Creature;IcyLands;Prevent the first 2 damage that would be dealt to you and each of your Creatures by each opposing Creature on a frozen Landscape. You may play Creatures on frozen Landscapes.;Adult Finn Vs Hunson Abadeer;retained_council.jpg;2;5;4
+Comedy Club;Building;NiceLands;The second time you heal HP each turn, draw a card.;Adult Finn Vs Hunson Abadeer;comedy_club.jpg;1;;
+Icing on the Cake;Spell;IcyLands;Freeze a Landscape. Opposing Creatures on frozen Landscapes take double damage this turn.;Adult Finn Vs Hunson Abadeer;icing_on_the_cake.jpg;1;;
