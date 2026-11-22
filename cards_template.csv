@@ -999,3 +999,4 @@ Flowis, Awakened Volcano;Creature;LavaFlats;Flowis costs 1 less to play for each
 Retained Council;Creature;IcyLands;Prevent the first 2 damage that would be dealt to you and each of your Creatures by each opposing Creature on a frozen Landscape. You may play Creatures on frozen Landscapes.;Adult Finn Vs Hunson Abadeer;retained_council.jpg;2;5;4
 Comedy Club;Building;NiceLands;The second time you heal HP each turn, draw a card.;Adult Finn Vs Hunson Abadeer;comedy_club.jpg;1;;
 Icing on the Cake;Spell;IcyLands;Freeze a Landscape. Opposing Creatures on frozen Landscapes take double damage this turn.;Adult Finn Vs Hunson Abadeer;icing_on_the_cake.jpg;1;;
+Sandy Pig;Creature;Rainbow;FLOOP >>> Flip target SandyLands Landscape in this Lane face down.;Kickstarter #3;sandy_pig.jpg;1;1;4
