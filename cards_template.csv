@@ -992,7 +992,7 @@ Reciprocity;Teamwork;Blue Plains;When you would draw 1 or more cards, you may ha
 Respect;Teamwork;LavaFlats;If you and your teammate each control a Creature with the same cost, draw a card at the end of your turns.;Doubles Trouble;respect.jpg;0;;
 Compassion;Teamwork;Rainbow;The first time your team plays a Rainbow Creature each turn, you may put 2 :attack_token: on it.;Doubles Trouble;compassion.jpg;2;;
 End of the Road;Building;SandyLands;Remove End of the Road from the game >>> Shuffle your discard pile into your deck.;Kickstarter #3;end_of_the_road.jpg;0;;
-Mr. Pig;Hero;;???;Kickstarter #3;mr._pig.jpg;;;
+Mr. Pig;Hero;;"Once per turn, you may discard a card with ""Pig"" in its name to return a Creature of equal or lesser cost from your discard pile to your hand. ";Kickstarter #3;mr._pig.jpg;;;
 Spirit Hall of Fame;Building;Blue Plains;FLOOP >>> Ready a Flooped Creature in this Lane. It cannot attack this turn.;Adult Finn Vs Hunson Abadeer;spirit_hall_of_fame.jpg;1;;
 Husker Tyrant;Creature;Cornfield;When Husker Tyrant enters play, if it replaced a Creature, remove all :attack_token: from all other Creatures and place them on Husker Tyrant.;Adult Finn Vs Hunson Abadeer;husker_tyrant.jpg;1;0;6
 Flowis, Awakened Volcano;Creature;LavaFlats;Flowis costs 1 less to play for each empty Landscape you control. When Flowis enters play, if you played it from your hand, you may remove any number of non-damage tokens from target Creature or player. For each token removed, burn each opposing Creature.;Adult Finn Vs Hunson Abadeer;flowis,_awakened_volcano.jpg;5;5;3
@@ -1005,3 +1005,12 @@ Flameingo Wing Swinger;Creature;LavaFlats;FLOOP >>> Burn all opposing Flooped Cr
 Boom of Doom;Spell;LavaFlats;Burn all Creatures equal to their cost +1.;Kickstarter #3;boom_of_doom.jpg;2;;
 Piquant Perch;Building;LavaFlats;After the first time you burn a Creature on your turn, you may flip a coin. If heads, burn that Creature again. If tails, discard a card and draw a card.;Kickstarter #3;piquant_perch.jpg;1;;
 Breakfast Princess;Hero;;At the start of each of their turns, friendly players may discard a card to draw a card. ;Kickstarter #3;breakfast_princess.jpg;;;
+Raggedy Princess;Hero;;Lose 5 HP >>> Select 2 Spells from target friendly player's discard pile and play 1 as if it were a Rainbow card for the cost of the other. Then, put both cards in time-out. (Limit: Once per turn.) ;Kickstarter #3;raggedy_princess.jpg;;;
+Princess Cookie;Hero;;The first time a friendly player would discard a card from their hand on each of their turns, they may instead play it immediately if they lose HP equal to double its cost.;Kickstarter #3;princess_cookie.jpg;;;
+Good Help;Creature;Rainbow;After the Fight Phase, if Good Help is still in play or in your discard pile, you may put it in time-out. Any friendly player may lose 3 HP to play Good Help from time-out for free.;Kickstarter #3;good_help.jpg;1;5;4
+Master of Arms;Creature;Rainbow;Master of Arms has +1 ATK for each :attack_token: on it.;Kickstarter #3;master_of_arms.jpg;1;3;3
+Royal Spy;Creature;Rainbow;Pay 1 action >>> You may look at the top 3 cards of target deck and put them back in any order on the top or bottom of that deck.;Kickstarter #3;royal_spy.jpg;1;2;6
+Hour of Need;Spell;Rainbow;You and target friendly player may swap HP totals.;Kickstarter #3;hour_of_need.jpg;0;;
+Temporary Truce;Spell;Rainbow;Put this card on top of the Army Deck. Skip the Invasion Phase next round, then put this into your discard pile. ;Kickstarter #3;temporary_truce.jpg;2;;
+Allied Keep;Building;Rainbow;Friendly Creatures in this Lane get +1 DEF for each different Landscape type controlled by friendly players.;Kickstarter #3;allied_keep.jpg;1;;
+Plain Pig;Creature;Rainbow;FLOOP >>> Flip target Blue Plains Landscape in this Lane face down.;Kickstarter #3;plain_pig.jpg;1;1;4
