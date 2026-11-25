@@ -1014,3 +1014,5 @@ Hour of Need;Spell;Rainbow;You and target friendly player may swap HP totals.;Ki
 Temporary Truce;Spell;Rainbow;Put this card on top of the Army Deck. Skip the Invasion Phase next round, then put this into your discard pile. ;Kickstarter #3;temporary_truce.jpg;2;;
 Allied Keep;Building;Rainbow;Friendly Creatures in this Lane get +1 DEF for each different Landscape type controlled by friendly players.;Kickstarter #3;allied_keep.jpg;1;;
 Plain Pig;Creature;Rainbow;FLOOP >>> Flip target Blue Plains Landscape in this Lane face down.;Kickstarter #3;plain_pig.jpg;1;1;4
+Ancient Psychic Tandem War Elephant (Left);Hero;;Once per turn, you may look at the hand of another friendly player with this Hero and play a card from it as if it were a Rainbow card.;Kickstarter #3;ancient_psychic_tandem_war_elephant_1.jpg;;;
+Ancient Psychic Tandem War Elephant (Right);Hero;;Once per turn, you may look at the hand of another friendly player with this Hero and play a card from it as if it were a Rainbow card.;Kickstarter #3;ancient_psychic_tandem_war_elephant_2.jpg;;;
