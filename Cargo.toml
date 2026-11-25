@@ -2,6 +2,7 @@
 name = "ethan"
 version = "0.2.2"
 edition = "2024"
+authors = ["K4444R"]
 
 [dependencies]
 serenity = { version = "0.12", features = ["framework", "standard_framework", "model"] }
